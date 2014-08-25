@@ -1,0 +1,3759 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: LearningStudioExams::ExamService
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!LearningStudioExams/ExamService.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (E)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../LearningStudioExams.html" title="LearningStudioExams (module)">LearningStudioExams</a></span></span>
+     &raquo; 
+    <span class="title">ExamService</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: LearningStudioExams::ExamService
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="../LearningStudioCore/BasicService.html" title="LearningStudioCore::BasicService (class)">LearningStudioCore::BasicService</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../LearningStudioCore/BasicService.html" title="LearningStudioCore::BasicService (class)">LearningStudioCore::BasicService</a></span></li>
+          
+            <li class="next">LearningStudioExams::ExamService</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">learning_studio_exams/lib/learning_studio_exams/exam_service.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Service for interacting with the exams module of LearningStudio</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="ExamService/Path.html" title="LearningStudioExams::ExamService::Path (class)">Path</a></span>, <span class='object_link'><a href="ExamService/QuestionType.html" title="LearningStudioExams::ExamService::QuestionType (class)">QuestionType</a></span>, <span class='object_link'><a href="ExamService/Relation.html" title="LearningStudioExams::ExamService::Relation (class)">Relation</a></span>
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="PEARSON_EXAM_TOKEN-constant" class="">PEARSON_EXAM_TOKEN =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Exam Constants.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Pearson-Exam-Token</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="PEARSON_EXAM_PASSWORD-constant" class="">PEARSON_EXAM_PASSWORD =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Pearson-Exam-Password</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="../LearningStudioCore/BasicService.html" title="LearningStudioCore::BasicService (class)">LearningStudioCore::BasicService</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../LearningStudioCore/BasicService.html#API_DOMAIN-constant" title="LearningStudioCore::BasicService::API_DOMAIN (constant)">LearningStudioCore::BasicService::API_DOMAIN</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#HTTP_METHODS-constant" title="LearningStudioCore::BasicService::HTTP_METHODS (constant)">LearningStudioCore::BasicService::HTTP_METHODS</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#NO_CONTENT-constant" title="LearningStudioCore::BasicService::NO_CONTENT (constant)">LearningStudioCore::BasicService::NO_CONTENT</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#PATH_SYSTEMDATETIME-constant" title="LearningStudioCore::BasicService::PATH_SYSTEMDATETIME (constant)">LearningStudioCore::BasicService::PATH_SYSTEMDATETIME</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../LearningStudioCore/BasicService.html" title="LearningStudioCore::BasicService (class)">LearningStudioCore::BasicService</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../LearningStudioCore/BasicService.html#data_format-instance_method" title="LearningStudioCore::BasicService#data_format (method)">#data_format</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#service_identifier-class_method" title="service_identifier (class method)">+ (Object) <strong>service_identifier</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Provides name of the service for identification purposes.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#answer_question-instance_method" title="#answer_question (instance method)">- (LearningStudioCore::Response) <strong>answer_question</strong>(user_id, course_id, exam_id, attempt_id, question_id, answer) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Updates a user&#39;s answer for a question on a specific attempt of an exam
+in a course with   `GET
+/users/:user_id/courses/:course_id/exams/:exam_id/attempts/:attempt_id/answers/:answer_id`
+`POST
+/users/:user_id/courses/:course_id/exams/:exam_id/attempts/:attempt_id/answers`
+`PUT
+/users/:user_id/courses/:course_id/exams/:exam_id/attempts/:attempt_id/answers/:answer_id`
+using OAuth2 as a student.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#complete_exam_attempt-instance_method" title="#complete_exam_attempt (instance method)">- (LearningStudioCore::Response) <strong>complete_exam_attempt</strong>(user_id, course_id, exam_id, attempt_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Updates a user&#39;s attempt of an exam in a course to complete with   `PUT
+/users/:user_id/courses/:course_id/exams/:exam_id/attempts/:attempt_id`  
+using OAuth2 as student.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_exam_attempt-instance_method" title="#create_exam_attempt (instance method)">- (LearningStudioCore::Response) <strong>create_exam_attempt</strong>(user_id, course_id, exam_id, exam_password = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create an exam attempt for a user in a course with `   `POST
+/users/:user_id/courses/:course_id/exams/:exam_id/attempts“   using OAuth1
+or OAuth2 as student, teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_user_exam-instance_method" title="#create_user_exam (instance method)">- (LearningStudioCore::Response) <strong>create_user_exam</strong>(user_id, course_id, exam_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Creates an exam for a user in a course with   `POST
+/users/:user_id/courses/:course_id/exams/:exam_id`   using OAuth2 as a
+student.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_question_answer-instance_method" title="#delete_question_answer (instance method)">- (LearningStudioCore::Response) <strong>delete_question_answer</strong>(user_id, course_id, exam_id, attempt_id, question_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete a user&#39;s answer for a question on a specific attempt of an exam
+in a course with   `DELETE
+/users/:user_id/courses/:course_id/exams/:exam_id/attempts/:attempt_id/answers/:answer_id`
+using OAuth2 as a student.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_user_exam-instance_method" title="#delete_user_exam (instance method)">- (LearningStudioCore::Response) <strong>delete_user_exam</strong>(user_id, course_id, exam_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Deletes an exam for a user in a course with   `DELETE
+/users/:user_id/courses/:course_id/exams/:exam_id`   using OAuth2 as a
+student.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_all_exam_items-instance_method" title="#get_all_exam_items (instance method)">- (LearningStudioCore::Response) <strong>get_all_exam_items</strong>(user_id, course_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve all of a user&#39;s exams for a course with   `GET
+/users/:user_id/courses/:course_id/items`   using OAuth1 or OAuth2 as a
+student or teacher.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_current_exam_attempt-instance_method" title="#get_current_exam_attempt (instance method)">- (LearningStudioCore::Response) <strong>get_current_exam_attempt</strong>(user_id, course_id, exam_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves and filters a user&#39;s current attempt of an exam in a course
+with   `GET /users/:user_id/courses/:course_id/exams/:exam_id/attempts`  
+using OAuth2 as a student.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_exam_attempt-instance_method" title="#get_exam_attempt (instance method)">- (LearningStudioCore::Response) <strong>get_exam_attempt</strong>(user_id, course_id, exam_id, attempt_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve a user&#39;s attempt of an exam in a course with “GET
+/users/:user_id/courses/:course_id/exams/:exam_id/attempts/:attempt_id“
+using OAuth1 or OAuth2 as a student, teacher, teaching assistant or
+administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_exam_attempt_summary-instance_method" title="#get_exam_attempt_summary (instance method)">- (LearningStudioCore::Response) <strong>get_exam_attempt_summary</strong>(user_id, course_id, exam_id, attempt_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve a summary of a user&#39;s attempt of an exam in a course with  
+`GET
+/users/:user_id/courses/:course_id/exams/:exam_id/attempts/:attempt_id/summary`
+using OAuth2 as a student.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_exam_attempts-instance_method" title="#get_exam_attempts (instance method)">- (LearningStudioCore::Response) <strong>get_exam_attempts</strong>(user_id, course_id, exam_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve a users&#39;s attempt of an exam in a course with   `GET
+/users/:user_id/courses/:course_id/exams/:exam_id/attempts`   using OAuth2
+as a student.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_exam_details-instance_method" title="#get_exam_details (instance method)">- (Object) <strong>get_exam_details</strong>(user_id, course_id, exam_id = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_exam_schedules-instance_method" title="#get_exam_schedules (instance method)">- (LearningStudioCore::Response) <strong>get_exam_schedules</strong>(course_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve exam schedules for a course with `GET
+/courses/:course_id/examschedules` using OAuth1 or OAuth2   as a teacher,
+teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_exam_section_question-instance_method" title="#get_exam_section_question (instance method)">- (LearningStudioCore::Response) <strong>get_exam_section_question</strong>(user_id, course_id, exam_id, section_id, question_type, question_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve details of a question for a section of a user&#39;s exam in a
+course with `GET
+/users/:user_id/courses/:course_id/exams/:exam_id/sections/:section_id/Questions/question_id`
+and `GET
+/users/:user_id/courses/:course_id/exams/:exam_id/sections/:section_id/Questions/question_id/choices`
+and `GET
+/users/:user_id/courses/:course_id/exams/:exam_id/sections/:section_id/Questions/question_id/premises`
+using OAuth2 as a student.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_exam_section_questions-instance_method" title="#get_exam_section_questions (instance method)">- (LearningStudioCore::Response) <strong>get_exam_section_questions</strong>(user_id, course_id, exam_id, section_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve details of questions for a section of a user&#39;s exam in a
+course with   `GET
+/users/:user_id/courses/:course_id/exams/:exam_id/sections/:section_id/questions`
+and getExamSectionQuestion using OAuth2 as a student.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_exam_sections-instance_method" title="#get_exam_sections (instance method)">- (LearningStudioCore::Response) <strong>get_exam_sections</strong>(user_id, course_id, exam_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve sections of an user&#39;s exam in a course with   `GET
+/users/:user_id/courses/:course_id/exams/:exam_id/sections`   using OAuth1
+or OAuth2 as a student, teacher,   teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_existing_exam-instance_method" title="#get_existing_exam (instance method)">- (LearningStudioCore::Response) <strong>get_existing_exam</strong>(user_id, course_id, exam_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve a user&#39;s exam for a course with   `GET
+/users/:user_id/courses/:course_id/exams/:exam_id`   using OAuth1 or OAuth2
+as a student, teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_existing_exams-instance_method" title="#get_existing_exams (instance method)">- (LearningStudioCore::Response) <strong>get_existing_exams</strong>(user_id, course_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve all of a user&#39;s existing exams for a course with   `GET
+/users/:user_id/courses/:course_id/exams`   using OAuth1 or OAuth2 as a
+student, teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_question_answer-instance_method" title="#get_question_answer (instance method)">- (LearningStudioCore::Response) <strong>get_question_answer</strong>(user_id, course_id, exam_id, attempt_id, question_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve a user&#39;s answer for a question on a specific attempt of an
+exam in a course with   `GET
+/users/:user_id/courses/:course_id/exams/:exam_id/attempts/:attempt_id/answers/:answer_id`
+using OAuth2 as a student.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_exam_attempt-instance_method" title="#start_exam_attempt (instance method)">- (LearningStudioCore::Response) <strong>start_exam_attempt</strong>(user_id, course_id, exam_id, exam_password = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieve a user&#39;s current attempt or create new attempt   of an exam in
+a course with   <span class='object_link'><a href="#get_current_exam_attempt-instance_method" title="LearningStudioExams::ExamService#get_current_exam_attempt (method)">#get_current_exam_attempt</a></span> and <span class='object_link'><a href="#create_exam_attempt-instance_method" title="LearningStudioExams::ExamService#create_exam_attempt (method)">#create_exam_attempt</a></span>  
+using OAuth2 as a student.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../LearningStudioCore/BasicService.html" title="LearningStudioCore::BasicService (class)">LearningStudioCore::BasicService</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../LearningStudioCore/BasicService.html#connection-instance_method" title="LearningStudioCore::BasicService#connection (method)">#connection</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#delete-instance_method" title="LearningStudioCore::BasicService#delete (method)">#delete</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#destroy%21-instance_method" title="LearningStudioCore::BasicService#destroy! (method)">#destroy!</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#get-instance_method" title="LearningStudioCore::BasicService#get (method)">#get</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#initialize-instance_method" title="LearningStudioCore::BasicService#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#logger-instance_method" title="LearningStudioCore::BasicService#logger (method)">#logger</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#logger-class_method" title="LearningStudioCore::BasicService.logger (method)">logger</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#post-instance_method" title="LearningStudioCore::BasicService#post (method)">#post</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#put-instance_method" title="LearningStudioCore::BasicService#put (method)">#put</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#request-instance_method" title="LearningStudioCore::BasicService#request (method)">#request</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#system_datetime-instance_method" title="LearningStudioCore::BasicService#system_datetime (method)">#system_datetime</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#system_datetime_millis-instance_method" title="LearningStudioCore::BasicService#system_datetime_millis (method)">#system_datetime_millis</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#use_oauth1-instance_method" title="LearningStudioCore::BasicService#use_oauth1 (method)">#use_oauth1</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#use_oauth2-instance_method" title="LearningStudioCore::BasicService#use_oauth2 (method)">#use_oauth2</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../LearningStudioCore/BasicService.html#initialize-instance_method" title="LearningStudioCore::BasicService#initialize (method)">LearningStudioCore::BasicService</a></span></p>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="service_identifier-class_method">
+  
+    + (<tt>Object</tt>) <strong>service_identifier</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Provides name of the service for identification purposes</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 105</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_service_identifier'>service_identifier</span>
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LS-Library-Exam-Ruby-V1</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="answer_question-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>answer_question</strong>(user_id, course_id, exam_id, attempt_id, question_id, answer) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Updates a user&#39;s answer for a question on a specific attempt of an exam
+in a course with</p>
+
+<pre class="code ruby"><code class="ruby">`GET /users/:user_id/courses/:course_id/exams/:exam_id/attempts/:attempt_id/answers/:answer_id`
+`POST /users/:user_id/courses/:course_id/exams/:exam_id/attempts/:attempt_id/answers`
+`PUT /users/:user_id/courses/:course_id/exams/:exam_id/attempts/:attempt_id/answers/:answer_id`
+using OAuth2 as a student.</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the user.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>ID of the course.</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_id</span>
+      
+      
+        <span class='type'>(<tt>ID of the exam.</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attempt_id</span>
+      
+      
+        <span class='type'>(<tt>ID of the attempt on the exam.</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>question_id</span>
+      
+      
+        <span class='type'>(<tt>ID of the question on the exam.</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>answer</span>
+      
+      
+        <span class='type'>(<tt>Answer to the question on the exam.</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 528</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_answer_question'>answer_question</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_attempt_id'>attempt_id</span><span class='comma'>,</span>
+                    <span class='id identifier rubyid_question_id'>question_id</span><span class='comma'>,</span> <span class='id identifier rubyid_answer'>answer</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_current_exam_attempt'>get_current_exam_attempt</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_response'>response</span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_error?'>error?</span>
+
+  <span class='id identifier rubyid_extra_headers'>extra_headers</span> <span class='op'>=</span> <span class='id identifier rubyid_exam_headers'>exam_headers</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_ATTEMPTS_ANSWERS_WITH_ID</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                       <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_attempt_id'>attempt_id</span><span class='comma'>,</span>
+                                                                       <span class='id identifier rubyid_question_id'>question_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_extra_headers'>extra_headers</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_error?'>error?</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_status_code'>status_code</span> <span class='op'>==</span> <span class='const'>LearningStudioCore</span><span class='op'>::</span><span class='const'>BasicService</span><span class='op'>::</span><span class='const'>HTTPStatusCode</span><span class='op'>::</span><span class='const'>NOT_FOUND</span>
+      <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_ATTEMPTS_ANSWERS</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                    <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_attempt_id'>attempt_id</span><span class='rbracket'>]</span><span class='comma'>,</span>
+                      <span class='id identifier rubyid_answer'>answer</span><span class='comma'>,</span> <span class='id identifier rubyid_extra_headers'>extra_headers</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='comma'>,</span> <span class='id identifier rubyid_answer'>answer</span><span class='comma'>,</span> <span class='id identifier rubyid_extra_headers'>extra_headers</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_response'>response</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="complete_exam_attempt-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>complete_exam_attempt</strong>(user_id, course_id, exam_id, attempt_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Updates a user&#39;s attempt of an exam in a course to complete with</p>
+
+<pre class="code ruby"><code class="ruby"><span class='backtick'>`</span><span class='tstring_content'>PUT /users/:user_id/courses/:course_id/exams/:exam_id/attempts/:attempt_id</span><span class='tstring_end'>`</span></span>
+<span class='id identifier rubyid_using'>using</span> <span class='const'>OAuth2</span> <span class='id identifier rubyid_as'>as</span> <span class='id identifier rubyid_student'>student</span></code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the user.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>ID of the course.</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_id</span>
+      
+      
+        <span class='type'>(<tt>ID of the exam.</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attempt_id</span>
+      
+      
+        <span class='type'>(<tt>ID of the attempt on the exam.</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 584</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_complete_exam_attempt'>complete_exam_attempt</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_attempt_id'>attempt_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_get_current_exam_attempt'>get_current_exam_attempt</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_response'>response</span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_error?'>error?</span>
+  <span class='id identifier rubyid_extra_headers'>extra_headers</span> <span class='op'>=</span> <span class='id identifier rubyid_exam_headers'>exam_headers</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>attempts</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>isCompleted</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='kw'>true</span>
+    <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
+  <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_ATTEMPTS_WITH_ID</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                       <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_attempt_id'>attempt_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_body'>body</span><span class='comma'>,</span> <span class='id identifier rubyid_extra_headers'>extra_headers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_exam_attempt-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>create_exam_attempt</strong>(user_id, course_id, exam_id, exam_password = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create an exam attempt for a user in a course with `</p>
+
+<pre class="code ruby"><code class="ruby">`POST /users/:user_id/courses/:course_id/exams/:exam_id/attempts``
+using OAuth1 or OAuth2 as student, teacher, teaching assistant or administrator.</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the user.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the course.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the exam.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_password</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>[Optional password from instructor].</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object which encapsulates API response.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+241
+242
+243
+244
+245
+246
+247</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 241</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_exam_attempt'>create_exam_attempt</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_password'>exam_password</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_exam_headers'>exam_headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_exam_headers'>exam_headers</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='const'>PEARSON_EXAM_PASSWORD</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_exam_password'>exam_password</span>
+  <span class='rbrace'>}</span> <span class='kw'>unless</span> <span class='id identifier rubyid_exam_password'>exam_password</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_ATTEMPTS</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_exam_headers'>exam_headers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_user_exam-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>create_user_exam</strong>(user_id, course_id, exam_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Creates an exam for a user in a course with</p>
+
+<pre class="code ruby"><code class="ruby">`POST /users/:user_id/courses/:course_id/exams/:exam_id`
+using OAuth2 as a student.</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the user.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the course.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the exam.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object which encapsulates API response.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+209
+210
+211
+212
+213
+214
+215
+216</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 209</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_user_exam'>create_user_exam</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_get_existing_exam'>get_existing_exam</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span><span class='id identifier rubyid_exam_id'>exam_id</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_status_code'>status_code</span> <span class='op'>==</span> <span class='const'>LearningStudioCore</span><span class='op'>::</span><span class='const'>BasicService</span><span class='op'>::</span><span class='const'>HTTPStatusCode</span><span class='op'>::</span><span class='const'>NOT_FOUND</span>
+    <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_WITH_ID</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_response'>response</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_question_answer-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>delete_question_answer</strong>(user_id, course_id, exam_id, attempt_id, question_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Delete a user&#39;s answer for a question on a specific attempt of an exam
+in a course with</p>
+
+<pre class="code ruby"><code class="ruby"><span class='backtick'>`</span><span class='tstring_content'>DELETE /users/:user_id/courses/:course_id/exams/:exam_id/attempts/:attempt_id/answers/:answer_id</span><span class='tstring_end'>`</span></span>
+<span class='id identifier rubyid_using'>using</span> <span class='const'>OAuth2</span> <span class='id identifier rubyid_as'>as</span> <span class='id identifier rubyid_a'>a</span> <span class='id identifier rubyid_student'>student</span></code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the user.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>ID of the course.</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_id</span>
+      
+      
+        <span class='type'>(<tt>ID of the exam.</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attempt_id</span>
+      
+      
+        <span class='type'>(<tt>ID of the attempt on the exam.</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>question_id</span>
+      
+      
+        <span class='type'>(<tt>ID of the question on the exam.</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+563
+564
+565
+566
+567
+568
+569
+570
+571</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 563</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_question_answer'>delete_question_answer</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_attempt_id'>attempt_id</span><span class='comma'>,</span> <span class='id identifier rubyid_question_id'>question_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_get_exam_attempt'>get_exam_attempt</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_attempt_id'>attempt_id</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_response'>response</span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_error?'>error?</span>
+  <span class='id identifier rubyid_extra_headers'>extra_headers</span> <span class='op'>=</span> <span class='id identifier rubyid_exam_headers'>exam_headers</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_ATTEMPTS_ANSWERS_WITH_ID</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                              <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_attempt_id'>attempt_id</span><span class='comma'>,</span>
+                                                              <span class='id identifier rubyid_question_id'>question_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_extra_headers'>extra_headers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_user_exam-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>delete_user_exam</strong>(user_id, course_id, exam_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Deletes an exam for a user in a course with</p>
+
+<pre class="code ruby"><code class="ruby">`DELETE /users/:user_id/courses/:course_id/exams/:exam_id`
+using OAuth2 as a student.</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the user.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the course.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the exam.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object which encapsulates API response.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+227
+228
+229</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 227</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_user_exam'>delete_user_exam</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_WITH_ID</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_all_exam_items-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_all_exam_items</strong>(user_id, course_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve all of a user&#39;s exams for a course with</p>
+
+<pre class="code ruby"><code class="ruby">`GET /users/:user_id/courses/:course_id/items`
+using OAuth1 or OAuth2 as a student or teacher.</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>User id</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Course id</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object which encapsulates the exam details.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 118</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_all_exam_items'>get_all_exam_items</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_ITEMS</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_error?'>error?</span>
+    <span class='id identifier rubyid_course_items_json'>course_items_json</span> <span class='op'>=</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span>
+    <span class='id identifier rubyid_json_obj'>json_obj</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_course_items_json'>course_items_json</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_items'>items</span> <span class='op'>=</span> <span class='id identifier rubyid_json_obj'>json_obj</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>items</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_exams'>exams</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_items'>items</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span>
+      <span class='id identifier rubyid_links'>links</span> <span class='op'>=</span> <span class='id identifier rubyid_item'>item</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>links</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_exams'>exams</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_links'>links</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_link'>link</span><span class='op'>|</span> <span class='const'>Relation</span><span class='op'>::</span><span class='const'>USER_COURSE_EXAM</span> <span class='op'>==</span> <span class='id identifier rubyid_link'>link</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rel</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_exam_items'>exam_items</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>items</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_exams'>exams</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='id identifier rubyid_exam_items'>exam_items</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_response'>response</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_current_exam_attempt-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_current_exam_attempt</strong>(user_id, course_id, exam_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieves and filters a user&#39;s current attempt of an exam in a course
+with</p>
+
+<pre class="code ruby"><code class="ruby">`GET /users/:user_id/courses/:course_id/exams/:exam_id/attempts`
+using OAuth2 as a student.</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the user.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the course.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the exam.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object which encapsulates API response.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 286</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_current_exam_attempt'>get_current_exam_attempt</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_get_exam_attempts'>get_exam_attempts</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_error?'>error?</span>
+    <span class='id identifier rubyid_attempts_json'>attempts_json</span> <span class='op'>=</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span>
+    <span class='id identifier rubyid_json_obj'>json_obj</span> <span class='op'>=</span><span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_attempts_json'>attempts_json</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_attempts'>attempts</span> <span class='op'>=</span> <span class='id identifier rubyid_json_obj'>json_obj</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>attempts</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_current_attempt'>current_attempt</span> <span class='op'>=</span> <span class='kw'>nil</span>
+
+    <span class='id identifier rubyid_current_attempt'>current_attempt</span> <span class='op'>=</span> <span class='id identifier rubyid_attempts'>attempts</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_attempt'>attempt</span><span class='op'>|</span> <span class='op'>!</span><span class='id identifier rubyid_attempt'>attempt</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>isCompleted</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_current_attempt'>current_attempt</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_current_attempt'>current_attempt</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+      <span class='id identifier rubyid_attempt'>attempt</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>attempt</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_current_attempt'>current_attempt</span> <span class='rbrace'>}</span>
+      <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='id identifier rubyid_attempt'>attempt</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_status_code'>status_code</span> <span class='op'>=</span> <span class='const'>LearningStudioCore</span><span class='op'>::</span><span class='const'>BasicService</span><span class='op'>::</span><span class='const'>HTTPStatusCode</span><span class='op'>::</span><span class='const'>NOT_FOUND</span>
+      <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_response'>response</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_exam_attempt-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_exam_attempt</strong>(user_id, course_id, exam_id, attempt_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve a user&#39;s attempt of an exam in a course with “GET
+/users/:user_id/courses/:course_id/exams/:exam_id/attempts/:attempt_id“
+using OAuth1 or OAuth2 as a student, teacher, teaching assistant or
+administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the user.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the exam.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attempt_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the exam attempt.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object which encapsulates API response.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+270
+271
+272
+273
+274
+275</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 270</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_exam_attempt'>get_exam_attempt</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_attempt_id'>attempt_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_ATTEMPTS_WITH_ID</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span>
+                                                    <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                    <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span>
+                                                    <span class='id identifier rubyid_attempt_id'>attempt_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_exam_attempt_summary-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_exam_attempt_summary</strong>(user_id, course_id, exam_id, attempt_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve a summary of a user&#39;s attempt of an exam in a course with</p>
+
+<pre class="code ruby"><code class="ruby"><span class='backtick'>`</span><span class='tstring_content'>GET /users/:user_id/courses/:course_id/exams/:exam_id/attempts/:attempt_id/summary</span><span class='tstring_end'>`</span></span>
+<span class='id identifier rubyid_using'>using</span> <span class='const'>OAuth2</span> <span class='id identifier rubyid_as'>as</span> <span class='id identifier rubyid_a'>a</span> <span class='id identifier rubyid_student'>student</span></code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the user.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the course.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the exam.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attempt_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the attempt.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object which encapsulates API response.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+318
+319
+320
+321</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 318</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_exam_attempt_summary'>get_exam_attempt_summary</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_attempt_id'>attempt_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_ATTEMPTS_SUMMARY</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                    <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_attempt_id'>attempt_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_exam_attempts-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_exam_attempts</strong>(user_id, course_id, exam_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve a users&#39;s attempt of an exam in a course with</p>
+
+<pre class="code ruby"><code class="ruby"><span class='backtick'>`</span><span class='tstring_content'>GET /users/:user_id/courses/:course_id/exams/:exam_id/attempts</span><span class='tstring_end'>`</span></span>
+<span class='id identifier rubyid_using'>using</span> <span class='const'>OAuth2</span> <span class='id identifier rubyid_as'>as</span> <span class='id identifier rubyid_a'>a</span> <span class='id identifier rubyid_student'>student</span></code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the user.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the course.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the exam.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object which encapsulates API response.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+258
+259
+260</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 258</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_exam_attempts'>get_exam_attempts</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_ATTEMPTS</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_exam_details-instance_method">
+  
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_exam_details</strong>(user_id, course_id) </span>
+    
+      <span class="overload">- (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_exam_details</strong>(user_id, course_id, exam_id) </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_exam_details</strong>(user_id, course_id) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve details for all exams for a course with</p>
+
+<pre class="code ruby"><code class="ruby">`GET /users/:user_id/courses/:course_id/exams`
+  using OAuth1 or OAuth2 as a student, teacher,
+  teaching assistant or administrator.</code></pre>
+
+<p>the exam details.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the user.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_d</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object which encapsulates</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">- (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_exam_details</strong>(user_id, course_id, exam_id) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Retrive details for all exams for a course with</p>
+
+<pre class="code ruby"><code class="ruby">`GET /users/:user_id/courses/:course_id/exams/:exam_id`
+using OAuth1 or OAuth2 as a student, teacher,
+teaching assistant or administrator.</code></pre>
+
+<p>the exam details.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the user.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_d</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the exam.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object which encapsulates</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+180
+181
+182
+183
+184
+185
+186</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 180</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_exam_details'>get_exam_details</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>?</span>
+    <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMDETAILS</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='rbracket'>]</span> <span class='op'>:</span>
+    <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMDETAILS_WITH_ID</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_exam_schedules-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_exam_schedules</strong>(course_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve exam schedules for a course with `GET
+/courses/:course_id/examschedules` using OAuth1 or OAuth2</p>
+
+<pre class="code ruby"><code class="ruby">as a teacher, teaching assistant or administrator.</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object which encapsulates exam schedules</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+195
+196
+197
+198</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 195</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_exam_schedules'>get_exam_schedules</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>COURSES_EXAMSCHEDULES</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_course_id'>course_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_exam_section_question-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_exam_section_question</strong>(user_id, course_id, exam_id, section_id, question_type, question_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve details of a question for a section of a user&#39;s exam in a
+course with `GET
+/users/:user_id/courses/:course_id/exams/:exam_id/sections/:section_id/&lt;:question_type&gt;Questions/question_id`
+and `GET
+/users/:user_id/courses/:course_id/exams/:exam_id/sections/:section_id/&lt;:question_type&gt;Questions/question_id/choices`
+and `GET
+/users/:user_id/courses/:course_id/exams/:exam_id/sections/:section_id/&lt;:question_type&gt;Questions/question_id/premises`
+using OAuth2 as a student</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the user.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the exam.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>section_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the section.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>question_type</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>Type of question.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>question_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the question.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object which encapsulates API response.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>RuntimeError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 431</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_exam_section_question'>get_exam_section_question</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_section_id'>section_id</span><span class='comma'>,</span>
+                              <span class='id identifier rubyid_question_type'>question_type</span><span class='comma'>,</span> <span class='id identifier rubyid_question_id'>question_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_qtype'>qtype</span> <span class='op'>=</span> <span class='const'>QuestionType</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_question_type'>question_type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>RuntimeError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid Question Type</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_qtype'>qtype</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_get_current_exam_attempt'>get_current_exam_attempt</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='rparen'>)</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_response'>response</span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_error?'>error?</span>
+
+  <span class='id identifier rubyid_extra_headers'>extra_headers</span> <span class='op'>=</span> <span class='id identifier rubyid_exam_headers'>exam_headers</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_question_relative_url'>question_relative_url</span> <span class='op'>=</span> <span class='id identifier rubyid_choices_relative_url'>choices_relative_url</span> <span class='op'>=</span> <span class='id identifier rubyid_premises_relative_url'>premises_relative_url</span> <span class='op'>=</span> <span class='kw'>nil</span>
+
+  <span class='kw'>case</span> <span class='id identifier rubyid_qtype'>qtype</span>
+  <span class='kw'>when</span> <span class='const'>QuestionType</span><span class='op'>::</span><span class='const'>TRUE_FALSE</span>
+    <span class='id identifier rubyid_question_relative_url'>question_relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_SECTIONS_TRUEFALSE</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                            <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_section_id'>section_id</span><span class='comma'>,</span>
+                                                                            <span class='id identifier rubyid_question_id'>question_id</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_choices_relative_url'>choices_relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_SECTIONS_TRUEFALSE_CHOICES</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                                   <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_section_id'>section_id</span><span class='comma'>,</span>
+                                                                                   <span class='id identifier rubyid_question_id'>question_id</span><span class='rbracket'>]</span>
+  <span class='kw'>when</span> <span class='const'>QuestionType</span><span class='op'>::</span><span class='const'>MULTIPLE_CHOICE</span>
+    <span class='id identifier rubyid_question_relative_url'>question_relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_SECTIONS_MULTIPLECHOICE</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                                 <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_section_id'>section_id</span><span class='comma'>,</span>
+                                                                                 <span class='id identifier rubyid_question_id'>question_id</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_choices_relative_url'>choices_relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_SECTIONS_MULTIPLECHOICE_CHOICES</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                                        <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_section_id'>section_id</span><span class='comma'>,</span>
+                                                                                        <span class='id identifier rubyid_question_id'>question_id</span><span class='rbracket'>]</span>
+  <span class='kw'>when</span> <span class='const'>QuestionType</span><span class='op'>::</span><span class='const'>MANY_MULTIPLE_CHOICE</span>
+    <span class='id identifier rubyid_question_relative_url'>question_relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_SECTIONS_MANYMULTIPLECHOICE</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                                     <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_section_id'>section_id</span><span class='comma'>,</span>
+                                                                                     <span class='id identifier rubyid_question_id'>question_id</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_choices_relative_url'>choices_relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_SECTIONS_MANYMULTIPLECHOICE_CHOICES</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                                            <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_section_id'>section_id</span><span class='comma'>,</span>
+                                                                                            <span class='id identifier rubyid_question_id'>question_id</span><span class='rbracket'>]</span>
+  <span class='kw'>when</span> <span class='const'>QuestionType</span><span class='op'>::</span><span class='const'>MATCHING</span>
+    <span class='id identifier rubyid_question_relative_url'>question_relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_SECTIONS_MATCHING</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                           <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_section_id'>section_id</span><span class='comma'>,</span>
+                                                                           <span class='id identifier rubyid_question_id'>question_id</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_premises_relative_url'>premises_relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_SECTIONS_MATCHING_PREMISES</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                                    <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_section_id'>section_id</span><span class='comma'>,</span>
+                                                                                    <span class='id identifier rubyid_question_id'>question_id</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_choices_relative_url'>choices_relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_SECTIONS_MATCHING_CHOICES</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                                  <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_section_id'>section_id</span><span class='comma'>,</span>
+                                                                                  <span class='id identifier rubyid_question_id'>question_id</span><span class='rbracket'>]</span>
+  <span class='kw'>when</span> <span class='const'>QuestionType</span><span class='op'>::</span><span class='const'>SHORT_ANSWER</span>
+    <span class='id identifier rubyid_question_relative_url'>question_relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_SECTIONS_SHORT</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                        <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_section_id'>section_id</span><span class='comma'>,</span>
+                                                                        <span class='id identifier rubyid_question_id'>question_id</span><span class='rbracket'>]</span>
+  <span class='kw'>when</span> <span class='const'>QuestionType</span><span class='op'>::</span><span class='const'>ESSAY</span>
+    <span class='id identifier rubyid_question_relative_url'>question_relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_SECTIONS_ESSAY</span>  <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                         <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_section_id'>section_id</span><span class='comma'>,</span>
+                                                                         <span class='id identifier rubyid_question_id'>question_id</span><span class='rbracket'>]</span>
+  <span class='kw'>when</span> <span class='const'>QuestionType</span><span class='op'>::</span><span class='const'>FILL_IN_THE_BLANK</span>
+    <span class='id identifier rubyid_question_relative_url'>question_relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_SECTIONS_FILLINTHEBLANK</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                                 <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_section_id'>section_id</span><span class='comma'>,</span>
+                                                                                 <span class='id identifier rubyid_question_id'>question_id</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_question_relative_url'>question_relative_url</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_extra_headers'>extra_headers</span><span class='rparen'>)</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_response'>response</span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_error?'>error?</span>
+
+  <span class='id identifier rubyid_question'>question</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_details'>details</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>question</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_question'>question</span><span class='lbracket'>[</span><span class='id identifier rubyid_qtype'>qtype</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Question</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+
+  <span class='kw'>unless</span> <span class='id identifier rubyid_choices_relative_url'>choices_relative_url</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_choices_relative_url'>choices_relative_url</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_extra_headers'>extra_headers</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_response'>response</span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_error?'>error?</span>
+    <span class='id identifier rubyid_choices'>choices</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_details'>details</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>choices</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_choices'>choices</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>choices</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>unless</span> <span class='id identifier rubyid_premises_relative_url'>premises_relative_url</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_premises_relative_url'>premises_relative_url</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_extra_headers'>extra_headers</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_response'>response</span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_error?'>error?</span>
+    <span class='id identifier rubyid_premises'>premises</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_details'>details</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>premises</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_premises'>premises</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>premises</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='id identifier rubyid_details'>details</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
+  <span class='id identifier rubyid_response'>response</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_exam_section_questions-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_exam_section_questions</strong>(user_id, course_id, exam_id, section_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve details of questions for a section of a user&#39;s exam in a
+course with</p>
+
+<pre class="code ruby"><code class="ruby">`GET /users/:user_id/courses/:course_id/exams/:exam_id/sections/:section_id/questions`
+and getExamSectionQuestion using OAuth2 as a student.</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the user.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the course.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the exam.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>section_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the section on the exam.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object which encapsulates API response.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 366</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_exam_section_questions'>get_exam_section_questions</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_section_id'>section_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_SECTIONS_QUESTIONS</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span>
+                                                                 <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_section_id'>section_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_error?'>error?</span>
+    <span class='id identifier rubyid_json_obj'>json_obj</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='op'>::</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_questions'>questions</span> <span class='op'>=</span> <span class='id identifier rubyid_json_obj'>json_obj</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>questions</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_section_questions'>section_questions</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_questions'>questions</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_question'>question</span><span class='op'>|</span>
+      <span class='id identifier rubyid_question_type'>question_type</span> <span class='op'>=</span> <span class='id identifier rubyid_question'>question</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>type</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_question_id'>question_id</span> <span class='op'>=</span> <span class='id identifier rubyid_question'>question</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>id</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_question_response'>question_response</span> <span class='op'>=</span> <span class='id identifier rubyid_get_exam_section_question'>get_exam_section_question</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                    <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_section_id'>section_id</span><span class='comma'>,</span>
+                                                    <span class='id identifier rubyid_question_type'>question_type</span><span class='comma'>,</span> <span class='id identifier rubyid_question_id'>question_id</span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='id identifier rubyid_question_response'>question_response</span> <span class='kw'>if</span> <span class='id identifier rubyid_question_response'>question_response</span><span class='period'>.</span><span class='id identifier rubyid_error?'>error?</span>
+
+      <span class='id identifier rubyid_section_question'>section_question</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_question_response'>question_response</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_section_question'>section_question</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>id</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_question_id'>question_id</span>
+      <span class='id identifier rubyid_section_question'>section_question</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>type</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_question_type'>question_type</span>		  
+<span class='id identifier rubyid_section_question'>section_question</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>pointsPossible</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_question'>question</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>pointsPossible</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_section_questions'>section_questions</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_section_question'>section_question</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>questions</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_section_questions'>section_questions</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_response'>response</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_exam_sections-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_exam_sections</strong>(user_id, course_id, exam_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve sections of an user&#39;s exam in a course with</p>
+
+<pre class="code ruby"><code class="ruby">`GET /users/:user_id/courses/:course_id/exams/:exam_id/sections`
+using OAuth1 or OAuth2 as a student, teacher,
+teaching assistant or administrator.</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the user.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the course.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the exam.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object which encapsulates API response.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+352
+353
+354</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 352</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_exam_sections'>get_exam_sections</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_SECTIONS</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_existing_exam-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_existing_exam</strong>(user_id, course_id, exam_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve a user&#39;s exam for a course with</p>
+
+<pre class="code ruby"><code class="ruby">`GET /users/:user_id/courses/:course_id/exams/:exam_id`
+using OAuth1 or OAuth2 as a student, teacher, teaching assistant or administrator</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the user</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the exam</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+157
+158
+159</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 157</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_existing_exam'>get_existing_exam</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_WITH_ID</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_existing_exams-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_existing_exams</strong>(user_id, course_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve all of a user&#39;s existing exams for a course with</p>
+
+<pre class="code ruby"><code class="ruby">`GET /users/:user_id/courses/:course_id/exams`
+using OAuth1 or OAuth2 as a student, teacher, teaching assistant or administrator</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the user</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+144
+145
+146</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 144</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_existing_exams'>get_existing_exams</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_question_answer-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_question_answer</strong>(user_id, course_id, exam_id, attempt_id, question_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve a user&#39;s answer for a question on a specific attempt of an
+exam in a course with</p>
+
+<pre class="code ruby"><code class="ruby">`GET /users/:user_id/courses/:course_id/exams/:exam_id/attempts/:attempt_id/answers/:answer_id`
+using OAuth2 as a student.</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the user.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the exam.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attempt_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the attempt on the exam.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>question_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the question on the exam.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object which encapsulates API response.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 406</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_question_answer'>get_question_answer</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_attempt_id'>attempt_id</span><span class='comma'>,</span> <span class='id identifier rubyid_question_id'>question_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_get_exam_attempt'>get_exam_attempt</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_attempt_id'>attempt_id</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_response'>response</span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_error?'>error?</span>
+  <span class='id identifier rubyid_extra_headers'>extra_headers</span> <span class='op'>=</span> <span class='id identifier rubyid_exam_headers'>exam_headers</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_EXAMS_ATTEMPTS_ANSWERS_WITH_ID</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span>
+                                                                       <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                       <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span>
+                                                                       <span class='id identifier rubyid_attempt_id'>attempt_id</span><span class='comma'>,</span>
+                                                                       <span class='id identifier rubyid_question_id'>question_id</span><span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_extra_headers'>extra_headers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start_exam_attempt-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>start_exam_attempt</strong>(user_id, course_id, exam_id, exam_password = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Retrieve a user&#39;s current attempt or create new attempt</p>
+
+<pre class="code ruby"><code class="ruby">of an exam in a course with
+{#get_current_exam_attempt} and {#create_exam_attempt}
+using OAuth2 as a student.</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the user.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the course.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><dl class="rdoc-list label-list"><dt>ID of the exam.
+<dd></dd></dl>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>exam_password</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>[Optional password from instructor].</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object which encapsulates API response.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+334
+335
+336
+337
+338
+339
+340</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_exams/lib/learning_studio_exams/exam_service.rb', line 334</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start_exam_attempt'>start_exam_attempt</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_password'>exam_password</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_get_current_exam_attempt'>get_current_exam_attempt</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_status_code'>status_code</span> <span class='op'>==</span> <span class='const'>LearningStudioCore</span><span class='op'>::</span><span class='const'>BasicService</span><span class='op'>::</span><span class='const'>HTTPStatusCode</span><span class='op'>::</span><span class='const'>NOT_FOUND</span>
+    <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_create_exam_attempt'>create_exam_attempt</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_id'>exam_id</span><span class='comma'>,</span> <span class='id identifier rubyid_exam_password'>exam_password</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_response'>response</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Mon Aug 25 09:15:48 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.0).
+</div>
+
+  </body>
+</html>

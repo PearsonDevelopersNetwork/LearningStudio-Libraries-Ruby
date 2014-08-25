@@ -1,0 +1,617 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: LearningStudioAuthentication::Request::OAuth2Request
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!LearningStudioAuthentication/Request/OAuth2Request.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (O)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../LearningStudioAuthentication.html" title="LearningStudioAuthentication (module)">LearningStudioAuthentication</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Request.html" title="LearningStudioAuthentication::Request (module)">Request</a></span></span>
+     &raquo; 
+    <span class="title">OAuth2Request</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: LearningStudioAuthentication::Request::OAuth2Request
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="OAuthRequest.html" title="LearningStudioAuthentication::Request::OAuthRequest (class)">OAuthRequest</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="OAuthRequest.html" title="LearningStudioAuthentication::Request::OAuthRequest (class)">OAuthRequest</a></span></li>
+          
+            <li class="next">LearningStudioAuthentication::Request::OAuth2Request</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">learning_studio_authentication/lib/learning_studio_authentication/request/oauth2_request.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>OAuth2 request</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#access_token-instance_method" title="#access_token (instance method)">- (Object) <strong>access_token</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute access_token.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#creation_time-instance_method" title="#creation_time (instance method)">- (Object) <strong>creation_time</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute creation_time.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#expires_at-instance_method" title="#expires_at (instance method)">- (Object) <strong>expires_at</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute expires_at.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#expires_in_seconds-instance_method" title="#expires_in_seconds (instance method)">- (Object) <strong>expires_in_seconds</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute expires_in_seconds.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#refresh_token-instance_method" title="#refresh_token (instance method)">- (Object) <strong>refresh_token</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute refresh_token.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="OAuthRequest.html" title="LearningStudioAuthentication::Request::OAuthRequest (class)">OAuthRequest</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="OAuthRequest.html#headers-instance_method" title="LearningStudioAuthentication::Request::OAuthRequest#headers (method)">#headers</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (OAuth2Request) <strong>initialize</strong>(headers, access_token, refresh_token, expires_in_seconds, creation_time) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of OAuth2Request.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="OAuthRequest.html" title="LearningStudioAuthentication::Request::OAuthRequest (class)">OAuthRequest</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="OAuthRequest.html#to_s-instance_method" title="LearningStudioAuthentication::Request::OAuthRequest#to_s (method)">#to_s</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="LearningStudioAuthentication::Request::OAuth2Request (class)">OAuth2Request</a></span></tt>) <strong>initialize</strong>(headers, access_token, refresh_token, expires_in_seconds, creation_time) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of OAuth2Request</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_authentication/lib/learning_studio_authentication/request/oauth2_request.rb', line 38</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_headers'>headers</span><span class='comma'>,</span> <span class='id identifier rubyid_access_token'>access_token</span><span class='comma'>,</span>
+               <span class='id identifier rubyid_refresh_token'>refresh_token</span><span class='comma'>,</span> <span class='id identifier rubyid_expires_in_seconds'>expires_in_seconds</span><span class='comma'>,</span> <span class='id identifier rubyid_creation_time'>creation_time</span><span class='rparen'>)</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span>
+  <span class='ivar'>@access_token</span> <span class='op'>=</span> <span class='id identifier rubyid_access_token'>access_token</span>
+  <span class='ivar'>@refresh_token</span> <span class='op'>=</span> <span class='id identifier rubyid_refresh_token'>refresh_token</span>
+  <span class='ivar'>@expires_in_seconds</span> <span class='op'>=</span> <span class='id identifier rubyid_expires_in_seconds'>expires_in_seconds</span>
+  <span class='ivar'>@creation_time</span> <span class='op'>=</span> <span class='id identifier rubyid_creation_time'>creation_time</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_expires_in_seconds'>expires_in_seconds</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_creation_time'>creation_time</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='ivar'>@expires_at</span> <span class='op'>=</span> <span class='id identifier rubyid_creation_time'>creation_time</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_expires_in_seconds'>expires_in_seconds</span> <span class='op'>*</span> <span class='int'>1000</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="access_token-instance_method">
+  
+    - (<tt>Object</tt>) <strong>access_token</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute access_token</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_authentication/lib/learning_studio_authentication/request/oauth2_request.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_access_token'>access_token</span>
+  <span class='ivar'>@access_token</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="creation_time-instance_method">
+  
+    - (<tt>Object</tt>) <strong>creation_time</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute creation_time</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_authentication/lib/learning_studio_authentication/request/oauth2_request.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_creation_time'>creation_time</span>
+  <span class='ivar'>@creation_time</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="expires_at-instance_method">
+  
+    - (<tt>Object</tt>) <strong>expires_at</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute expires_at</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_authentication/lib/learning_studio_authentication/request/oauth2_request.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_expires_at'>expires_at</span>
+  <span class='ivar'>@expires_at</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="expires_in_seconds-instance_method">
+  
+    - (<tt>Object</tt>) <strong>expires_in_seconds</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute expires_in_seconds</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_authentication/lib/learning_studio_authentication/request/oauth2_request.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_expires_in_seconds'>expires_in_seconds</span>
+  <span class='ivar'>@expires_in_seconds</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="refresh_token-instance_method">
+  
+    - (<tt>Object</tt>) <strong>refresh_token</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute refresh_token</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_authentication/lib/learning_studio_authentication/request/oauth2_request.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_refresh_token'>refresh_token</span>
+  <span class='ivar'>@refresh_token</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+</div>
+
+    <div id="footer">
+  Generated on Mon Aug 25 09:15:46 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.0).
+</div>
+
+  </body>
+</html>

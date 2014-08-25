@@ -1,0 +1,4596 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: LearningStudioGrades::Service
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!LearningStudioGrades/Service.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../LearningStudioGrades.html" title="LearningStudioGrades (module)">LearningStudioGrades</a></span></span>
+     &raquo; 
+    <span class="title">Service</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: LearningStudioGrades::Service
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="../LearningStudioCore/BasicService.html" title="LearningStudioCore::BasicService (class)">LearningStudioCore::BasicService</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../LearningStudioCore/BasicService.html" title="LearningStudioCore::BasicService (class)">LearningStudioCore::BasicService</a></span></li>
+          
+            <li class="next">LearningStudioGrades::Service</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">learning_studio_grades/lib/learning_studio_grades/service.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Service/Path.html" title="LearningStudioGrades::Service::Path (class)">Path</a></span>
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  
+
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="../LearningStudioCore/BasicService.html" title="LearningStudioCore::BasicService (class)">LearningStudioCore::BasicService</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../LearningStudioCore/BasicService.html#API_DOMAIN-constant" title="LearningStudioCore::BasicService::API_DOMAIN (constant)">LearningStudioCore::BasicService::API_DOMAIN</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#HTTP_METHODS-constant" title="LearningStudioCore::BasicService::HTTP_METHODS (constant)">LearningStudioCore::BasicService::HTTP_METHODS</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#NO_CONTENT-constant" title="LearningStudioCore::BasicService::NO_CONTENT (constant)">LearningStudioCore::BasicService::NO_CONTENT</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#PATH_SYSTEMDATETIME-constant" title="LearningStudioCore::BasicService::PATH_SYSTEMDATETIME (constant)">LearningStudioCore::BasicService::PATH_SYSTEMDATETIME</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../LearningStudioCore/BasicService.html" title="LearningStudioCore::BasicService (class)">LearningStudioCore::BasicService</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../LearningStudioCore/BasicService.html#data_format-instance_method" title="LearningStudioCore::BasicService#data_format (method)">#data_format</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#service_identifier-class_method" title="service_identifier (class method)">+ (Object) <strong>service_identifier</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Provides name of the service for identification purposes.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_custom_gradebook_category-instance_method" title="#create_custom_gradebook_category (instance method)">- (LearningStudioCore::Response) <strong>create_custom_gradebook_category</strong>(course_id, custom_category) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create custom gradebook category for a course with   POST
+/courses/:course_id/gradebook/custom_categories using OAuth1 or OAuth2 as a
+teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_custom_gradebook_category_and_item-instance_method" title="#create_custom_gradebook_category_and_item (instance method)">- (LearningStudioCore::Response) <strong>create_custom_gradebook_category_and_item</strong>(course_id, custom_category, custom_item) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create custom category and item with   POST
+/courses/:course_id/gradebook/custom_categories   POST
+/courses/:course_id/gradebook/customCategories/:custom_category_id/customItems
+using OAuth1 or OAuth2 as a teacher, teaching assistance or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_custom_gradebook_item-instance_method" title="#create_custom_gradebook_item (instance method)">- (LearningStudioCore::Response) <strong>create_custom_gradebook_item</strong>(course_id, custom_category_id, custom_item) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create custom gradebook item in a custom category for a course with    POST
+/courses/:course_id/gradebook/customCategories/:custom_category_id/customItems
+using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_grade-instance_method" title="#create_grade (instance method)">- (LearningStudioCore::Response) <strong>create_grade</strong>(user_id, course_id, gradebook_item_id, grade) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a user&#39;s grade for an item in a course with   POST
+/users/:user_id/courses/:course_id/gradebook/gradebookItems/:gradebook_item_id/grade
+using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_gradebook_item_grade-instance_method" title="#create_gradebook_item_grade (instance method)">- (LearningStudioCore::Response) <strong>create_gradebook_item_grade</strong>(user_id, course_id, gradebook_item_id, grade) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create user&#39;s grade for an item in a course with   POST
+/users/:user_id/courses/:course_id/gradebookItems/:gradebook_item_id/grade
+using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_custom_gradebook_category-instance_method" title="#delete_custom_gradebook_category (instance method)">- (LearningStudioCore::Response) <strong>delete_custom_gradebook_category</strong>(course_id, custom_category_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete custom gradebook category for a course with   DELETE
+/courses/:course_id/gradebook/customCategories/:custom_category_id using
+OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_custom_gradebook_item-instance_method" title="#delete_custom_gradebook_item (instance method)">- (LearningStudioCore::Response) <strong>delete_custom_gradebook_item</strong>(course_id, custom_category_id, custom_item_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete custom gradebook item in a custom category for a course with  
+DELETE
+/courses/:course_id/gradebook/customCategories/:custom_category_id/customItems/:custom_item_id
+using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_grade-instance_method" title="#delete_grade (instance method)">- (LearningStudioCore::Response) <strong>delete_grade</strong>(user_id, course_id, gradebook_item_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete a user&#39;s grade for an item in a course with   DELETE
+/users/:user_id/courses/:course_id/gradebook/gradebookItems/:gradebook_item_id/grade
+using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_gradebook_item_grade-instance_method" title="#delete_gradebook_item_grade (instance method)">- (LearningStudioCore::Response) <strong>delete_gradebook_item_grade</strong>(user_id, course_id, gradebook_item_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete user&#39;s grade for an item in a course with   DELETE
+/users/:user_id/courses/:course_id/gradebookItems/:gradebook_item_id/grade
+using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_course_gradebook_user_item-instance_method" title="#get_course_gradebook_user_item (instance method)">- (LearningStudioCore::Response) <strong>get_course_gradebook_user_item</strong>(user_id, course_id, user_gradebook_item_id, expand_grade = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get user gradebook item in a course gradebook by user gradebook item id
+with   GET
+/users/:user_id/courses/:course_id/gradebook/userGradebookItems/:user_gradebook_item
+or   GET
+/users/:user_id/courses/:course_id/gradebook/userGradebookItems/:user_gradebook_item?expandGrade=true
+using OAuth1 or Auth2 as a student, teacher, teaching assistant or
+administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_course_gradebook_user_items-instance_method" title="#get_course_gradebook_user_items (instance method)">- (LearningStudioCore::Response) <strong>get_course_gradebook_user_items</strong>(user_id, course_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get user gradebook items in a course gradebook with   GET
+/users/:user_id/courses/:course_id/gradebook/userGradebookItems   using
+OAuth1 or Auth2 as a student, teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_current_grade-instance_method" title="#get_current_grade (instance method)">- (LearningStudioCore::Response) <strong>get_current_grade</strong>(user_id, course_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get a user&#39;s current grades for a course with   GET
+/users/:user_id/courses/:course_id/coursegradetodate using OAuth1 or Auth2
+as a student, teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_current_grades-instance_method" title="#get_current_grades (instance method)">- (LearningStudioCore::Response) <strong>get_current_grades</strong>(course_id, student_ids = nil, offset = nil, limit = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get current grades for all students in a course with   GET
+/courses/:course_id/gradebook/rostercoursegradestodate?offset=:offset&amp;limit=:limit
+using OAuth1 or Auth2 as a teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_custom_gradebook_categories-instance_method" title="#get_custom_gradebook_categories (instance method)">- (LearningStudioCore::Response) <strong>get_custom_gradebook_categories</strong>(course_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>GET /courses/:course_id/gradebook/customCategories using OAuth1 or OAuth2
+as a student, teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_custom_gradebook_category-instance_method" title="#get_custom_gradebook_category (instance method)">- (LearningStudioCore::Response) <strong>get_custom_gradebook_category</strong>(course_id, custom_category_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get custom gradebook category for a course with   GET
+/courses/:course_id/gradebook/customCategories/:custom_category_id using
+OAuth1 or OAuth2 as a student, teacher, teaching assistant or
+administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_custom_gradebook_item-instance_method" title="#get_custom_gradebook_item (instance method)">- (LearningStudioCore::Response) <strong>get_custom_gradebook_item</strong>(course_id, custom_category_id, custom_item_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Object with details of status and content.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_custom_gradebook_items-instance_method" title="#get_custom_gradebook_items (instance method)">- (LearningStudioCore::Response) <strong>get_custom_gradebook_items</strong>(course_id, custom_category_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Response object with details of status and content.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_grade-instance_method" title="#get_grade (instance method)">- (LearningStudioCore::Response) <strong>get_grade</strong>(user_id, course_id, gradebook_item_id, use_source_domain = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get a user&#39;s grade for an item in a course with override for
+useSourceDomain with   GET
+/users/:user_id/courses/:course_id/gradebook/gradebookItems/:gradebook_item_id/grade
+using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_gradebook_custom_item-instance_method" title="#get_gradebook_custom_item (instance method)">- (LearningStudioCore::Response) <strong>get_gradebook_custom_item</strong>(course_id, custom_category_id, custom_item_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get custom item in a custom gradebook category for a course with   GET
+/courses/:course_id/gradebook/customCategories/:custom_category_id/customItems/:custom_item_id
+using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_gradebook_item-instance_method" title="#get_gradebook_item (instance method)">- (LearningStudioCore::Response) <strong>get_gradebook_item</strong>(course_id, gradebook_item_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get specific gradebook item for a course with   GET
+/courses/:course_id/gradebookItems/:gradebook_item_id using OAuth1 or
+OAuth2 as a student, teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_gradebook_item_grade-instance_method" title="#get_gradebook_item_grade (instance method)">- (LearningStudioCore::Response) <strong>get_gradebook_item_grade</strong>(course_id, gradebook_item_id, grade_id, graded_student_ids = nil, use_source_domain = nil, expand_user = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get specific grade for an item in a course using parameters with   GET
+/courses/:course_id/gradebookItems/:gradebook_item_id/grades/:grade_id?gradedStudents=:graded_student_ids&amp;useSourceDomains=true&amp;expand=user
+using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_gradebook_item_grades-instance_method" title="#get_gradebook_item_grades (instance method)">- (LearningStudioCore::Response) <strong>get_gradebook_item_grades</strong>(course_id, gradebook_item_id, graded_student_ids = nil, use_source_domain = nil, expand_user = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get grades for specific gradebook item in a course using parameters with  
+GET
+/courses/:course_id/gradebookItems/:gradebook_item_id/grades?gradedStudents=:graded_student_ids&amp;useSourceDomains=true&amp;expand=user
+using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_gradebook_items-instance_method" title="#get_gradebook_items (instance method)">- (LearningStudioCore::Response) <strong>get_gradebook_items</strong>(course_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get gradebook items for a course with   GET
+/courses/:course_id/gradebookItems using OAuth1 or OAuth2 as a student,
+teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_grades-instance_method" title="#get_grades (instance method)">- (LearningStudioCore::Response) <strong>get_grades</strong>(user_id, course_id, use_source_domain = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Response object with details of status and content.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_total_points_available-instance_method" title="#get_total_points_available (instance method)">- (Object) <strong>get_total_points_available</strong>(user_id, course_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>details of status and content.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_user_gradebook_items-instance_method" title="#get_user_gradebook_items (instance method)">- (LearningStudioCore::Response) <strong>get_user_gradebook_items</strong>(user_id, course_id, use_source_domain = nil, expand_grade = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get gradebook items for a user in a course with   GET
+/users/:user_id/courses/:course_id/userGradebookItems with optional
+use_source_domain and expand parameters using OAuth1 or OAuth2 as a
+student, teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_custom_gradebook_category-instance_method" title="#update_custom_gradebook_category (instance method)">- (LearningStudioCore::Response) <strong>update_custom_gradebook_category</strong>(course_id, custom_category_id, custom_category) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Update custom gradebook category for a course with    PUT
+/courses/:course_id/gradebook/customCategories/:custom_category_id` using
+OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_grade-instance_method" title="#update_grade (instance method)">- (LearningStudioCore::Response) <strong>update_grade</strong>(user_id, course_id, gradebook_item_id, grade) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Update a user&#39;s grade for an item in a course with   PUT
+/users/:user_id/courses/:course_id/gradebook/gradebookItems/:gradebook_item_id/grade
+using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_gradebook_item-instance_method" title="#update_gradebook_item (instance method)">- (LearningStudioCore::Response) <strong>update_gradebook_item</strong>(course_id, gradebook_item_id, gradebook_item) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Update specific gradebook item for a course with   PUT
+/courses/:course_id/gradebook/gradebookItems/:gradebook_item_id using
+OAuth1 or OAuth2 as a student, teacher, teaching assistant or
+administrator.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_gradebook_item_grade-instance_method" title="#update_gradebook_item_grade (instance method)">- (LearningStudioCore::Response) <strong>update_gradebook_item_grade</strong>(user_id, course_id, gradebook_item_id, grade) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Update user&#39;s grade for an item in a course with   PUT
+/users/:user_id/courses/:course_id/gradebookItems/:gradebook_item_id/grade
+using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../LearningStudioCore/BasicService.html" title="LearningStudioCore::BasicService (class)">LearningStudioCore::BasicService</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../LearningStudioCore/BasicService.html#connection-instance_method" title="LearningStudioCore::BasicService#connection (method)">#connection</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#delete-instance_method" title="LearningStudioCore::BasicService#delete (method)">#delete</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#destroy%21-instance_method" title="LearningStudioCore::BasicService#destroy! (method)">#destroy!</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#get-instance_method" title="LearningStudioCore::BasicService#get (method)">#get</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#initialize-instance_method" title="LearningStudioCore::BasicService#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#logger-instance_method" title="LearningStudioCore::BasicService#logger (method)">#logger</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#logger-class_method" title="LearningStudioCore::BasicService.logger (method)">logger</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#post-instance_method" title="LearningStudioCore::BasicService#post (method)">#post</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#put-instance_method" title="LearningStudioCore::BasicService#put (method)">#put</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#request-instance_method" title="LearningStudioCore::BasicService#request (method)">#request</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#system_datetime-instance_method" title="LearningStudioCore::BasicService#system_datetime (method)">#system_datetime</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#system_datetime_millis-instance_method" title="LearningStudioCore::BasicService#system_datetime_millis (method)">#system_datetime_millis</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#use_oauth1-instance_method" title="LearningStudioCore::BasicService#use_oauth1 (method)">#use_oauth1</a></span>, <span class='object_link'><a href="../LearningStudioCore/BasicService.html#use_oauth2-instance_method" title="LearningStudioCore::BasicService#use_oauth2 (method)">#use_oauth2</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../LearningStudioCore/BasicService.html#initialize-instance_method" title="LearningStudioCore::BasicService#initialize (method)">LearningStudioCore::BasicService</a></span></p>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="service_identifier-class_method">
+  
+    + (<tt>Object</tt>) <strong>service_identifier</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Provides name of the service for identification purposes</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 64</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_service_identifier'>service_identifier</span>
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LS-Library-Grade-Ruby-V1</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create_custom_gradebook_category-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>create_custom_gradebook_category</strong>(course_id, custom_category) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create custom gradebook category for a course with</p>
+
+<pre class="code ruby"><code class="ruby">POST /courses/:course_id/gradebook/custom_categories</code></pre>
+
+<p>using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>Stirng</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>custom_category</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Custom category to create.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110
+111</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 109</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_custom_gradebook_category'>create_custom_gradebook_category</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_category'>custom_category</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'>Path</span><span class='op'>::</span><span class='const'>COURSES_GRADEBOOK_CUSTOMCATEGORIES</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_course_id'>course_id</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_category'>custom_category</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_custom_gradebook_category_and_item-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>create_custom_gradebook_category_and_item</strong>(course_id, custom_category, custom_item) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create custom category and item with</p>
+
+<pre class="code ruby"><code class="ruby">POST /courses/:course_id/gradebook/custom_categories
+POST /courses/:course_id/gradebook/customCategories/:custom_category_id/customItems</code></pre>
+
+<p>using OAuth1 or OAuth2 as a teacher, teaching assistance or administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>custom_category</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Custom category to create.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>custom_item</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Custom item to create.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 80</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_custom_gradebook_category_and_item'>create_custom_gradebook_category_and_item</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                              <span class='id identifier rubyid_custom_category'>custom_category</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_item'>custom_item</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_create_custom_gradebook_category'>create_custom_gradebook_category</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_category'>custom_category</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_response'>response</span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_error?'>error?</span>
+
+  <span class='id identifier rubyid_custom_category_object'>custom_category_object</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>customCategory</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_custom_category_id'>custom_category_id</span> <span class='op'>=</span> <span class='id identifier rubyid_custom_category_object'>custom_category_object</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>guid</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_create_custom_gradebook_item'>create_custom_gradebook_item</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                               <span class='id identifier rubyid_custom_category_id'>custom_category_id</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_item'>custom_item</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_response'>response</span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_error?'>error?</span>
+
+  <span class='id identifier rubyid_custom_item_object'>custom_item_object</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>customItem</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_wrapper'>wrapper</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>customCategory</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_custom_category_object'>custom_category_object</span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>customItem</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_custom_item_object'>custom_item_object</span>
+  <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='id identifier rubyid_wrapper'>wrapper</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
+  <span class='id identifier rubyid_response'>response</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_custom_gradebook_item-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>create_custom_gradebook_item</strong>(course_id, custom_category_id, custom_item) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create custom gradebook item in a custom category for a course with</p>
+
+<pre class="code ruby"><code class="ruby">POST /courses/:course_id/gradebook/customCategories/:custom_category_id/customItems</code></pre>
+
+<p>using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>custom_category_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the custom category.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>custom_item</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Custom item to create.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object with details. of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+184
+185
+186
+187
+188
+189</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 184</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_custom_gradebook_item'>create_custom_gradebook_item</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_category_id'>custom_category_id</span><span class='comma'>,</span>
+                                 <span class='id identifier rubyid_custom_item'>custom_item</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>COURSES_GRADEBOOK_CUSTOMCATEGORIES_CUSTOMITEMS</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                         <span class='id identifier rubyid_custom_category_id'>custom_category_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_item'>custom_item</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_grade-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>create_grade</strong>(user_id, course_id, gradebook_item_id, grade) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a user&#39;s grade for an item in a course with</p>
+
+<pre class="code ruby"><code class="ruby">POST /users/:user_id/courses/:course_id/gradebook/gradebookItems/:gradebook_item_id/grade</code></pre>
+
+<p>using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the user</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>gradebook_item_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the gradebook item</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>grade</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Grade on the exam</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+447
+448
+449
+450</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 447</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_grade'>create_grade</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='comma'>,</span> <span class='id identifier rubyid_grade'>grade</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_GRADEBOOK_GRADEBOOKITEMS_GRADE</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='comma'>,</span> <span class='id identifier rubyid_grade'>grade</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_gradebook_item_grade-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>create_gradebook_item_grade</strong>(user_id, course_id, gradebook_item_id, grade) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create user&#39;s grade for an item in a course with</p>
+
+<pre class="code ruby"><code class="ruby">POST /users/:user_id/courses/:course_id/gradebookItems/:gradebook_item_id/grade</code></pre>
+
+<p>using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the user.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>gradebook_item_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the gradebook item.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>grade</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Grade content to be created.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+371
+372
+373
+374</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 371</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_gradebook_item_grade'>create_gradebook_item_grade</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='comma'>,</span> <span class='id identifier rubyid_grade'>grade</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_GRADEBOOKITEMS_GRADE</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='comma'>,</span> <span class='id identifier rubyid_grade'>grade</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_custom_gradebook_category-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>delete_custom_gradebook_category</strong>(course_id, custom_category_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Delete custom gradebook category for a course with</p>
+
+<pre class="code ruby"><code class="ruby">DELETE /courses/:course_id/gradebook/customCategories/:custom_category_id</code></pre>
+
+<p>using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>custom_category_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the custom category.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object with details. of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+140
+141
+142
+143
+144</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 140</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_custom_gradebook_category'>delete_custom_gradebook_category</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_category_id'>custom_category_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>COURSES_GRADEBOOK_CUSTOMCATEGORIES_</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                              <span class='id identifier rubyid_custom_category_id'>custom_category_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_custom_gradebook_item-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>delete_custom_gradebook_item</strong>(course_id, custom_category_id, custom_item_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Delete custom gradebook item in a custom category for a course with</p>
+
+<pre class="code ruby"><code class="ruby">DELETE /courses/:course_id/gradebook/customCategories/:custom_category_id/customItems/:custom_item_id</code></pre>
+
+<p>using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>custom_category_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the custom category.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>custom_item_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the custom item.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+201
+202
+203
+204
+205
+206
+207</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 201</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_custom_gradebook_item'>delete_custom_gradebook_item</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_category_id'>custom_category_id</span><span class='comma'>,</span>
+                                 <span class='id identifier rubyid_custom_item_id'>custom_item_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>COURSES_GRADEBOOK_CUSTOMCATEGORIES_CUSTOMITEMS_</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                           <span class='id identifier rubyid_custom_category_id'>custom_category_id</span><span class='comma'>,</span>
+                                                                           <span class='id identifier rubyid_custom_item_id'>custom_item_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_grade-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>delete_grade</strong>(user_id, course_id, gradebook_item_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Delete a user&#39;s grade for an item in a course with</p>
+
+<pre class="code ruby"><code class="ruby">DELETE /users/:user_id/courses/:course_id/gradebook/gradebookItems/:gradebook_item_id/grade</code></pre>
+
+<p>using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the user.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>gradebook_item_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the gradebook item.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+479
+480
+481
+482</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 479</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_grade'>delete_grade</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_GRADEBOOK_GRADEBOOKITEMS_GRADE</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_gradebook_item_grade-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>delete_gradebook_item_grade</strong>(user_id, course_id, gradebook_item_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Delete user&#39;s grade for an item in a course with</p>
+
+<pre class="code ruby"><code class="ruby">DELETE /users/:user_id/courses/:course_id/gradebookItems/:gradebook_item_id/grade</code></pre>
+
+<p>using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the user.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>gradebook_item_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the gradebook item.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+406
+407
+408
+409
+410
+411</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 406</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_gradebook_item_grade'>delete_gradebook_item_grade</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_GRADEBOOKITEMS_GRADE</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span>
+                                                            <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                            <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_course_gradebook_user_item-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_course_gradebook_user_item</strong>(user_id, course_id, user_gradebook_item_id, expand_grade = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get user gradebook item in a course gradebook by user gradebook item id
+with</p>
+
+<pre class="code ruby"><code class="ruby">GET /users/:user_id/courses/:course_id/gradebook/userGradebookItems/:user_gradebook_item</code></pre>
+
+<p>or</p>
+
+<pre class="code ruby"><code class="ruby">GET /users/:user_id/courses/:course_id/gradebook/userGradebookItems/:user_gradebook_item?expandGrade=true</code></pre>
+
+<p>using OAuth1 or Auth2 as a student, teacher, teaching assistant or
+administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the user.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>user_gradebook_item_id</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>concatenation of :user_id-:gradebook_item_guid.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>expand_grade</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Flag for using expand grade parameter.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+589
+590
+591
+592
+593
+594
+595
+596</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 589</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_course_gradebook_user_item'>get_course_gradebook_user_item</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_user_gradebook_item_id'>user_gradebook_item_id</span><span class='comma'>,</span> <span class='id identifier rubyid_expand_grade'>expand_grade</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_GRADEBOOK_USERGRADEBOOKITEMS_</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_expand_grade'>expand_grade</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='id identifier rubyid_get_course_gradebook_user_item_url'>get_course_gradebook_user_item_url</span><span class='lparen'>(</span><span class='id identifier rubyid_expand_grade'>expand_grade</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_user_gradebook_item_id'>user_gradebook_item_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_course_gradebook_user_items-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_course_gradebook_user_items</strong>(user_id, course_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get user gradebook items in a course gradebook with</p>
+
+<pre class="code ruby"><code class="ruby">GET /users/:user_id/courses/:course_id/gradebook/userGradebookItems
+using OAuth1 or Auth2 as a student, teacher, teaching assistant or administrator</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the user.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+570
+571
+572
+573</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 570</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_course_gradebook_user_items'>get_course_gradebook_user_items</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_GRADEBOOK_USERGRADEBOOKITEMS</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_current_grade-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_current_grade</strong>(user_id, course_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get a user&#39;s current grades for a course with</p>
+
+<pre class="code ruby"><code class="ruby">GET /users/:user_id/courses/:course_id/coursegradetodate</code></pre>
+
+<p>using OAuth1 or Auth2 as a student, teacher, teaching assistant or
+administrator</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the user.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+533
+534
+535
+536</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 533</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_current_grade'>get_current_grade</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_COURSEGRADETODATE</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_current_grades-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_current_grades</strong>(course_id, student_ids = nil, offset = nil, limit = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get current grades for all students in a course with</p>
+
+<pre class="code ruby"><code class="ruby">GET /courses/:course_id/gradebook/rostercoursegradestodate?offset=:offset&amp;limit=:limit</code></pre>
+
+<p>using OAuth1 or Auth2 as a teacher, teaching assistant or administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>student_ids</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Comma-separated list of students to filter.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>offset</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Offset position</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>limit</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Limitation on count of records.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 549</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_current_grades'>get_current_grades</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_student_ids'>student_ids</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_offset'>offset</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_offset'>offset</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='id identifier rubyid_get_current_grades_without_offset_url'>get_current_grades_without_offset_url</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_student_ids'>student_ids</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='op'>!</span><span class='id identifier rubyid_student_ids'>student_ids</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='id identifier rubyid_get_current_grades_with_offset_url'>get_current_grades_with_offset_url</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_student_ids'>student_ids</span><span class='comma'>,</span> <span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_limit'>limit</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>COURSES_GRADEBOOK_ROSTERCOURSEGRADESTODATE_OFFSET_LIMIT_</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                                      <span class='id identifier rubyid_offset'>offset</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span>
+                                                                                      <span class='id identifier rubyid_limit'>limit</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_custom_gradebook_categories-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_custom_gradebook_categories</strong>(course_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>GET /courses/:course_id/gradebook/customCategories using OAuth1 or OAuth2
+as a student, teacher, teaching assistant or administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+168
+169
+170
+171</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 168</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_custom_gradebook_categories'>get_custom_gradebook_categories</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>COURSES_GRADEBOOK_CUSTOMCATEGORIES</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_course_id'>course_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_custom_gradebook_category-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_custom_gradebook_category</strong>(course_id, custom_category_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get custom gradebook category for a course with</p>
+
+<pre class="code ruby"><code class="ruby">GET /courses/:course_id/gradebook/customCategories/:custom_category_id</code></pre>
+
+<p>using OAuth1 or OAuth2 as a student, teacher, teaching assistant or
+administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>custom_category_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the custom category.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+155
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 155</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_custom_gradebook_category'>get_custom_gradebook_category</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_category_id'>custom_category_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>COURSES_GRADEBOOK_CUSTOMCATEGORIES_</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_category_id'>custom_category_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_custom_gradebook_item-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_custom_gradebook_item</strong>(course_id, custom_category_id, custom_item_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns object with details of status and content.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>custom_category_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the custom category.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>custom_item_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the custom item.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+236
+237
+238
+239
+240
+241</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 236</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_custom_gradebook_item'>get_custom_gradebook_item</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_category_id'>custom_category_id</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_item_id'>custom_item_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>COURSES_GRADEBOOK_CUSTOMCATEGORIES_CUSTOMITEMS_GRADEBOOKITEM</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                                       <span class='id identifier rubyid_custom_category_id'>custom_category_id</span><span class='comma'>,</span>
+                                                                                       <span class='id identifier rubyid_custom_item_id'>custom_item_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_custom_gradebook_items-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_custom_gradebook_items</strong>(course_id, custom_category_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns Response object with details of status and content</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+253
+254
+255</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 253</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_custom_gradebook_items'>get_custom_gradebook_items</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_category_id'>custom_category_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='const'>Path</span><span class='op'>::</span><span class='const'>COURSES_GRADEBOOK_CUSTOMCATEGORIES_CUSTOMITEMS</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_category_id'>custom_category_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_grade-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_grade</strong>(user_id, course_id, gradebook_item_id, use_source_domain = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get a user&#39;s grade for an item in a course with override for
+useSourceDomain with</p>
+
+<pre class="code ruby"><code class="ruby">GET /users/:user_id/courses/:course_id/gradebook/gradebookItems/:gradebook_item_id/grade</code></pre>
+
+<p>using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the user.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>gradebook_item_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the gradebook item.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>use_source_domain</span>
+      
+      
+        <span class='type'></span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Indicator of whether to include domain in urls</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+495
+496
+497
+498
+499
+500
+501
+502</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 495</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_grade'>get_grade</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='comma'>,</span> <span class='id identifier rubyid_use_source_domain'>use_source_domain</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_GRADEBOOK_GRADEBOOKITEMS_GRADE</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_use_source_domain'>use_source_domain</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='id identifier rubyid_get_grade_url'>get_grade_url</span><span class='lparen'>(</span><span class='id identifier rubyid_use_source_domain'>use_source_domain</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span>  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_gradebook_custom_item-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_gradebook_custom_item</strong>(course_id, custom_category_id, custom_item_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get custom item in a custom gradebook category for a course with</p>
+
+<pre class="code ruby"><code class="ruby">GET /courses/:course_id/gradebook/customCategories/:custom_category_id/customItems/:custom_item_id</code></pre>
+
+<p>using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>custom_category_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the custom category</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>custom_item_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the custom item</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+219
+220
+221
+222
+223
+224</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 219</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_gradebook_custom_item'>get_gradebook_custom_item</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_category_id'>custom_category_id</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_item_id'>custom_item_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>COURSES_GRADEBOOK_CUSTOMCATEGORIES_CUSTOMITEMS_</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                                          <span class='id identifier rubyid_custom_category_id'>custom_category_id</span><span class='comma'>,</span>
+                                                                          <span class='id identifier rubyid_custom_item_id'>custom_item_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_gradebook_item-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_gradebook_item</strong>(course_id, gradebook_item_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get specific gradebook item for a course with</p>
+
+<pre class="code ruby"><code class="ruby">GET /courses/:course_id/gradebookItems/:gradebook_item_id</code></pre>
+
+<p>using OAuth1 or OAuth2 as a student, teacher, teaching assistant or
+administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>gradebook_item_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the gradebook item.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+280
+281
+282
+283
+284</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 280</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_gradebook_item'>get_gradebook_item</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>COURSES_GRADEBOOKITEMS_</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                 <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_gradebook_item_grade-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_gradebook_item_grade</strong>(course_id, gradebook_item_id, grade_id, graded_student_ids = nil, use_source_domain = nil, expand_user = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get specific grade for an item in a course using parameters with</p>
+
+<pre class="code ruby"><code class="ruby">GET /courses/:course_id/gradebookItems/:gradebook_item_id/grades/:grade_id?gradedStudents=:graded_student_ids&amp;useSourceDomains=true&amp;expand=user</code></pre>
+
+<p>using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>gradebook_item_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the gradebook item</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>graded_student_ids</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of students (semicolon separated)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>grade_id</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the grade within the gradebook</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>use_source_domain</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Indicator of whether to include domains in urls</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>expand_user</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Indicator of whether to expand user info</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 344</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_gradebook_item_grade'>get_gradebook_item_grade</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='comma'>,</span> <span class='id identifier rubyid_grade_id'>grade_id</span><span class='comma'>,</span>
+                             <span class='id identifier rubyid_graded_student_ids'>graded_student_ids</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_use_source_domain'>use_source_domain</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span>
+                             <span class='id identifier rubyid_expand_user'>expand_user</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>COURSES_GRADEBOOKITEMS_GRADES_</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                        <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='comma'>,</span>
+                                                        <span class='id identifier rubyid_grade_id'>grade_id</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_use_source_domain'>use_source_domain</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='id identifier rubyid_update_gradebook_item_grade_relative_url'>update_gradebook_item_grade_relative_url</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='comma'>,</span>
+                                                            <span class='id identifier rubyid_graded_student_ids'>graded_student_ids</span><span class='comma'>,</span>
+                                                            <span class='id identifier rubyid_use_source_domain'>use_source_domain</span><span class='comma'>,</span>
+                                                            <span class='id identifier rubyid_expand_user'>expand_user</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_gradebook_item_grades-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_gradebook_item_grades</strong>(course_id, gradebook_item_id, graded_student_ids = nil, use_source_domain = nil, expand_user = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get grades for specific gradebook item in a course using parameters with</p>
+
+<pre class="code ruby"><code class="ruby">GET /courses/:course_id/gradebookItems/:gradebook_item_id/grades?gradedStudents=:graded_student_ids&amp;useSourceDomains=true&amp;expand=user</code></pre>
+
+<p>using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>gradebook_item_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the gradebook item</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>graded_student_ids</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of students (semicolon separated)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>use_source_domain</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Indicator of whether to include domains in urls</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>expand_user</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Indicator of whether to expand user info</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 316</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_gradebook_item_grades'>get_gradebook_item_grades</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='comma'>,</span>
+                              <span class='id identifier rubyid_graded_student_ids'>graded_student_ids</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span>
+                              <span class='id identifier rubyid_use_source_domain'>use_source_domain</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span>
+                              <span class='id identifier rubyid_expand_user'>expand_user</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>COURSES_GRADEBOOKITEMS_GRADES</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_use_source_domain'>use_source_domain</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='id identifier rubyid_update_gradebook_item_grade_relative_url'>update_gradebook_item_grade_relative_url</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='comma'>,</span>
+                                                            <span class='id identifier rubyid_graded_student_ids'>graded_student_ids</span><span class='comma'>,</span>
+                                                            <span class='id identifier rubyid_use_source_domain'>use_source_domain</span><span class='comma'>,</span>
+                                                            <span class='id identifier rubyid_expand_user'>expand_user</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_gradebook_items-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_gradebook_items</strong>(course_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get gradebook items for a course with</p>
+
+<pre class="code ruby"><code class="ruby">GET /courses/:course_id/gradebookItems</code></pre>
+
+<p>using OAuth1 or OAuth2 as a student, teacher, teaching assistant or
+administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+266
+267
+268</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 266</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_gradebook_items'>get_gradebook_items</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='const'>Path</span><span class='op'>::</span><span class='const'>COURSES_GRADEBOOKITEMS</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_course_id'>course_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_grades-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_grades</strong>(user_id, course_id, use_source_domain = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns Response object with details of status and content.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+515
+516
+517
+518
+519
+520
+521
+522</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 515</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_grades'>get_grades</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_use_source_domain'>use_source_domain</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_GRADEBOOK_USERGRADEBOOKITEMS</span>      
+	  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_use_source_domain'>use_source_domain</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+		<span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='id identifier rubyid_get_grades_url'>get_grades_url</span><span class='lparen'>(</span><span class='id identifier rubyid_use_source_domain'>use_source_domain</span><span class='rparen'>)</span>
+	  <span class='kw'>end</span>
+	  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='rbracket'>]</span>	  
+	  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_total_points_available-instance_method">
+  
+    - (<tt>Object</tt>) <strong>get_total_points_available</strong>(user_id, course_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>details of status and content.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+606
+607
+608
+609</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 606</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_total_points_available'>get_total_points_available</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_GRADEBOOK_USERGRADEBOOKITEMSTOTAL</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_user_gradebook_items-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>get_user_gradebook_items</strong>(user_id, course_id, use_source_domain = nil, expand_grade = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get gradebook items for a user in a course with</p>
+
+<pre class="code ruby"><code class="ruby">GET /users/:user_id/courses/:course_id/userGradebookItems</code></pre>
+
+<p>with optional use_source_domain and expand parameters using OAuth1 or
+OAuth2 as a student, teacher, teaching assistant or administrator</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the user.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>use_source_domain</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Flag for using source domain parameter.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>expand_grade</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Flag for using expand grade parameter.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+427
+428
+429
+430
+431
+432
+433
+434
+435</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 427</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_user_gradebook_items'>get_user_gradebook_items</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                          <span class='id identifier rubyid_use_source_domain'>use_source_domain</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_expand_grade'>expand_grade</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_use_source_domain'>use_source_domain</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='id identifier rubyid_get_user_gradebook_items_url'>get_user_gradebook_items_url</span><span class='lparen'>(</span><span class='id identifier rubyid_use_source_domain'>use_source_domain</span><span class='comma'>,</span> <span class='id identifier rubyid_expand_grade'>expand_grade</span><span class='rparen'>)</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='rbracket'>]</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_USERGRADEBOOKITEMS</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_custom_gradebook_category-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>update_custom_gradebook_category</strong>(course_id, custom_category_id, custom_category) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Update custom gradebook category for a course with</p>
+
+<pre class="code ruby"><code class="ruby">PUT /courses/:course_id/gradebook/customCategories/:custom_category_id`</code></pre>
+
+<p>using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>custom_category_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the custom category.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>custom_category</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Custom category to create.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+123
+124
+125
+126
+127
+128</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 123</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_custom_gradebook_category'>update_custom_gradebook_category</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_category_id'>custom_category_id</span><span class='comma'>,</span>
+                                     <span class='id identifier rubyid_custom_category'>custom_category</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>COURSES_GRADEBOOK_CUSTOMCATEGORIES_</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                              <span class='id identifier rubyid_custom_category_id'>custom_category_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_category'>custom_category</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_grade-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>update_grade</strong>(user_id, course_id, gradebook_item_id, grade) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Update a user&#39;s grade for an item in a course with</p>
+
+<pre class="code ruby"><code class="ruby">PUT /users/:user_id/courses/:course_id/gradebook/gradebookItems/:gradebook_item_id/grade</code></pre>
+
+<p>using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the user.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>gradebook_item_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the gradebook item.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>grade</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Grade on the exam.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+464
+465
+466
+467</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 464</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_grade'>update_grade</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='comma'>,</span> <span class='id identifier rubyid_grade'>grade</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_GRADEBOOK_GRADEBOOKITEMS_GRADE</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='comma'>,</span> <span class='id identifier rubyid_grade'>grade</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_gradebook_item-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>update_gradebook_item</strong>(course_id, gradebook_item_id, gradebook_item) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Update specific gradebook item for a course with</p>
+
+<pre class="code ruby"><code class="ruby">PUT /courses/:course_id/gradebook/gradebookItems/:gradebook_item_id</code></pre>
+
+<p>using OAuth1 or OAuth2 as a student, teacher, teaching assistant or
+administrator</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>gradebook_item_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the gradebook item</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>gradebook_item</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Details of gradebook item</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+298
+299
+300
+301</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 298</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_gradebook_item'>update_gradebook_item</span><span class='lparen'>(</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item'>gradebook_item</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>COURSES_GRADEBOOK_GRADEBOOKITEMS_</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item'>gradebook_item</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_gradebook_item_grade-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>) <strong>update_gradebook_item_grade</strong>(user_id, course_id, gradebook_item_id, grade) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Update user&#39;s grade for an item in a course with</p>
+
+<pre class="code ruby"><code class="ruby">PUT /users/:user_id/courses/:course_id/gradebookItems/:gradebook_item_id/grade</code></pre>
+
+<p>using OAuth1 or OAuth2 as a teacher, teaching assistant or administrator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the user.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>course_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the course.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>gradebook_item_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>ID of the gradebook item.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>grade</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Grade content to be updated.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../LearningStudioCore/Response.html" title="LearningStudioCore::Response (class)">LearningStudioCore::Response</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Response object with details of status and content.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+388
+389
+390
+391
+392
+393</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'learning_studio_grades/lib/learning_studio_grades/service.rb', line 388</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_gradebook_item_grade'>update_gradebook_item_grade</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span> <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='comma'>,</span> <span class='id identifier rubyid_grade'>grade</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_relative_url'>relative_url</span> <span class='op'>=</span> <span class='const'>Path</span><span class='op'>::</span><span class='const'>USERS_COURSES_GRADEBOOKITEMS_GRADE</span> <span class='op'>%</span> <span class='lbracket'>[</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span>
+                                                            <span class='id identifier rubyid_course_id'>course_id</span><span class='comma'>,</span>
+                                                            <span class='id identifier rubyid_gradebook_item_id'>gradebook_item_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='id identifier rubyid_relative_url'>relative_url</span><span class='comma'>,</span> <span class='id identifier rubyid_grade'>grade</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Mon Aug 25 09:15:49 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.0).
+</div>
+
+  </body>
+</html>

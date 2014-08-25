@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>LearningStudio Libraries in Ruby</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+		<link href='http://fonts.googleapis.com/css?family=Raleway:500,700|Roboto:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../assets/css/normalize.css">
+        <link rel="stylesheet" href="../assets/css/main.css">
+        <link rel="stylesheet" href="../assets/css/prism.css">
+        <script src="../assets/js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+	<div id="MastBar">
+		<div id="TopColorbar"> </div>
+		<div id="TitleBar">
+			<div>
+				<a href="http://pdn.pearson.com" target="_blank" title="Home"><img src="../assets/pdn-header-sm.PNG" /></a>
+				<a href="http://pdn.pearson.com" target="_blank">pdn.pearson.com</a>
+			</div>
+		</div>
+	</div>
+		
+	<article> 
+		<h1>Authentication</h1>
+		
+		<blockquote>
+			<h3>Documentation</h3> 
+			<p>LearningStudio API Authentication can be tricky at first. We recommend you read up on our <a href="http://pdn.pearson.com/apis/authentication/authentication-concepts">Authentication Concepts</a> in the  documentation.</p>
+		</blockquote> 
+		<blockquote>
+			<h3>API Keys</h3>
+			<p>You will need keys to work with the APIs.</p>
+			<ul>
+				<li><b>Application ID</b>: Identifies your Application for analytics and quota limits.</li> 
+				<li><b>Campus Keys</b>: A <i>Token Key Moniker (TKM)</i>, <i>Shared Secret</i>, and <i>Client String</i> identifies the LearningStudio campus where your data comes from.</li>
+			</ul>
+			<p>You can get an Application ID for your app and campus keys for our Sandbox Campus by creating an app on the PDN. <a href="http://pdn.pearson.com/learningstudio/get-a-key">Learn more here</a>.
+		</blockquote>
+		
+		<h4>Contents</h4>
+		<ul>
+			<li><a href="#Background">Background Information</a></li>
+			<li><a href="#Usage">Using Authentication</a>
+				<ul>
+					<li><a href="#OAuth1">OAuth 1</a></li>
+					<li><a href="#OAuth2Password">OAuth 2 Password Grant Type</a></li>
+					<li><a href="#OAuth2Assertion">OAuth 2 Assertion Grant Type</a></li>
+				</ul>
+			</li>
+		</ul>
+		
+		<a name="Background"></a>
+		<h2>Background Information</h2>
+		<p>There are two main use cases for Authentication: System-to-System API calls, and API calls on behalf of a user.</p> 
+		<p><b>System-to-System</b> calls are most often used by administration systems that are looking up or processing changes for many courses or users at once. For example, retrieving a course roster or all the grades for a course, or many grade updates. These don't require a user context, and for these we use OAuth 1.0a. With OAuth 1, every request is signed individually, and the signature is compared by LearningStudio to ensure you have permission to access that data. Not all APIs are enabled for system-to-system requests. </p> 
+		<p><b>API Calls on behalf of Users</b> are made when you need to perform an action that should be associated to a user in LearningStudio such as posting a thread discussion, retrieving the content a student is permitted to see, submitting homework, etc. For these requests, we use OAuth 2, where you will generate a token for that user and send the token with every request in an HTTP header.</p>
+		<p>To get a token in OAuth 2, you have two options. First, if you are able to collect the user's password, you can use the Password grant type. If you don't know the user's password, you can use an Assertion grant type which generates a token request using only the user's username and the campus keys. This library, especially when combined with <a href="library-core.html">Core</a>, simplifies this work.</p> 
+		<p>Lastly, our Authentication schemes both require the use of a <b>CMAC-AES</b> algorithm for generating the appropriate signature. This algorithm is more obscure than most, so this library handles the cryptography heavy lifting.</p> 
+		
+		<hr>
+		
+		<a name="Usage"></a>
+		<h2>Using Authentication</h2> 
+		<!-- <blockquote>
+			<p>Note, when used on it's own, Authentication library only generates the relevant signature or token. It does not execute an API call (other than the token request).</p> 
+		</blockquote>  -->
+		
+		<a name="OAuth1"></a>
+		<h3>OAuth 1 (System to System)</h3> 
+		
+		<h4>Setup</h4>
+		<p>To begin, require the authentication library's <code>config</code>, <code>request</code>, and <code>service</code> resources.</p>
+		<pre><code class="language-ruby">require 'learning_studio_authentication/config'
+require 'learning_studio_authentication/request'
+require 'learning_studio_authentication/service'</code></pre>
+		<h4>Configuration</h4>
+		<p>In OAuth 1, you need your Application ID, Token Key Moniker and Secret. In the OAuth 1.0a standard, the TKM and secret are called the Consumer Key and Consumer Secret.</p> 
+		<p>The <code>OAuthConfig</code> class is a generic carrier for the configuration information for all authentication methods. You'll add the three keys you need using these methods:</p> 
+		<pre><code class="language-ruby">config = LearningStudioAuthentication::Config::OAuthConfig.new({
+    :application_id   => app_id,
+    :consumer_key     => token_key_moniker,
+    :consumer_secret  => shared_secret
+})</code></pre>
+		<h4>The Factory</h4>
+		<p>The <code>OAuthServiceFactory</code> object instantiates an appropriate service for the authentication method you want to use. With this approach, you need only use the factory object and tell it which auth method you want to use, and it returns an object that will handle the signature generation. When creating the factory object, pass the config object to the constructor:</p> 
+		<pre><code class="language-ruby">factory = LearningStudioAuthentication::Service::OAuthServiceFactory.new(config)
+oauth_service = factory.build("OAuth1SignatureService")</code></pre>
+
+		<h4>Signature Generation</h4>
+		<p>In this example, <code>oauth_service</code> is an object of the <code>OAuth1SignatureService</code> class. This object will take the configuration information and the details of the API request you'll be making, and generates a signature. In OAuth 1, every API call is individually signed, so you always pass it the URI of the endpoint you're calling.</p> 
+		<p>The method you will use to generate the signature is <code>generateOAuth1Request</code> method, which has the following signature:</p> 
+		<pre><code class="language-ruby">generate_request(http_method, url, body)</code></pre>
+		<table> 
+			<tr>
+				<th>Parameter</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td><code>http_method</code></td>
+				<td>Any of <code>GET</code>, <code>POST</code>, <code>PUT</code>, or <code>DELETE</code>,depending on the operation you're performing.  Required for all requests.</td>
+			</tr>
+			<tr>
+				<td><code>url</code></td>
+				<td>The URL of the API endpoint you're calling. Required for all requests.</td>
+			</tr>
+			<tr>
+				<td><code>body</code></td>
+				<td>The body of the API request. Required for <code>POST</code> and <code>PUT</code> operations only.  Otherwise, an empty string value should be given.</td>
+			</tr>
+		</table> 
+			
+		<h4>Results</h4>
+		<p>When you call the <code>generate_request</code> method, it will return an object of the <code>OAuth1Request</code> class. This object has two properties:</p>
+		<table> 
+			<tr>
+				<th>Property</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td><code>headers</code></td>
+				<td>The full HTTP header to include in your API call. They are returned as key value pairs in a IDictionary&lt;string,string&gt; collection. These headers are ready to use, you don't need to encode any values. Example: <br><code>X-Authorization: OAuth realm="...</code></td>
+			</tr>
+			<tr>
+				<td><code>signature</code></td>
+				<td>The signature that was generated, in an unencoded form. If you are building your own HTTP header for the request, be sure to base64-encode this value before using it. Example: <br><code>n55cLjl02ejAJCEV1QTnvg==</code></td>
+			</tr>
+		</table>
+		
+		
+		<h4>Example</h4>
+<pre class="line-numbers"><code class="language-ruby">require 'learning_studio_authentication/config'
+require 'learning_studio_authentication/request'
+require 'learning_studio_authentication/service'
+
+APP_ID            =	"" # Identifies your Application
+TOKEN_KEY_MONIKER = "" # Called "Consumer Key" in OAuth 1 standard
+SHARED_SECRET     = "" # Called "Consumer Secret" in OAuth 1 standard
+
+URL               = "" # e.g., https://api.learningstudio.com/users/{user_id}
+
+config = LearningStudioAuthentication::Config::OAuthConfig.new({
+    :application_id   => APP_ID,
+    :consumer_key     => TOKEN_KEY_MONIKER,
+    :consumer_secret  => SHARED_SECRET
+})
+
+factory = LearningStudioAuthentication::Service::OAuthServiceFactory.new(config)
+oauth_service = factory.build("OAuth1SignatureService")
+oauth_request = oauth_service.generate_request('GET', URL, "")
+
+# ---------------------------------------------------------------------------
+# If using POST or PUT, also send the body in the third parameter:
+#
+# REQUEST_BODY =    "" # e.g. "{'userId':'00000'}
+# oauth_request = oauth_service.generate_request('GET', URL, REQUEST_BODY)
+# ---------------------------------------------------------------------------
+
+http_header = oauth_request.headers
+# Returns HTTP Header key and value as a dictionary, 
+# ready to use in your API Call, e.g.
+# X-Authroization: OAuth realm="... 
+
+signature_only = oauth_request.signature
+# Returns the unencoded signature value, e.g.
+# n55cLjl02ejAJCEV1QTnvg==
+puts "Signature: %s" % [signature_only]
+
+
+# Using the HTTP Header
+request = HTTPClient.new
+response = request.get(URL, nil, http_header)
+puts "Status Code: %s" % [response.status]</code></pre>
+
+		
+		<hr>
+
+		<a name="OAuth2Password"></a>
+		<h3>OAuth 2 (Password Grant Type)</h3>
+		
+		<h4>Setup</h4>
+		<p>To begin, require the authentication library's <code>config</code>, <code>request</code>, and <code>service</code> resources.</p>
+		<pre><code class="language-ruby">require 'learning_studio_authentication/config'
+require 'learning_studio_authentication/request'
+require 'learning_studio_authentication/service'</code></pre>
+		<h4>Configuration</h4>
+		<p>In OAuth 2 Password Grant Type, you need your Application ID, Token Key Moniker, and Client String.</p> 
+		<p>The <code>OAuthConfig</code> class is a generic carrier for the configuration information for all authentication methods. You'll add the two keys you need using these methods:</p> 
+		<pre><code class="language-ruby">config = LearningStudioAuthentication::Config::OAuthConfig.new({
+    :application_id   => APP_ID,
+    :consumer_key     => TOKEN_KEY_MONIKER,
+    :client_string    => CLIENT_STRING
+});</code></pre>
+		<h4>The Factory</h4>
+		<p>The <code>OAuthServiceFactory</code> object instantiates an appropriate service for the authentication method you want to use. With this approach, you need only use the factory object and tell it which auth method you want to use, and it returns an object that will handle the access token generation. When creating the factory object, pass the config object to the constructor:</p> 
+				<pre><code class="language-ruby">factory = LearningStudioAuthentication::Service::OAuthServiceFactory.new(config)
+oauth_service = factory.build("OAuth2PasswordService")</code></pre>
+
+	    <h4>Token Request</h4> 
+
+		<p>In this example, <code>oauth_service</code> is an object of the <code>OAuth2PasswordService</code> class. This object will take the configuration information and the username and password, and requests an access token for the user. Use the token in an HTTP Header for all subsequent requests. The token lasts an hour, after which time you can use the refresh token to get a new access token without requiring the user to sign in again.</p> 
+		<p>The method you will use to request the token is <code>generate_request</code> method, which has the following signature:</p> 
+		<pre><code class="language-ruby">generate_request(username, password )</code></pre>
+		<h4>Results</h4>
+		<p>When you call the <code>generate_request</code> method, it will return an object of the <code>OAuth2Request</code> class. This object has several properties:</p>
+		<table> 
+			<tr>
+				<th>Property</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td><code>headers</code></td>
+				<td>The full HTTP header to include in your API call. It is returned as a full header in a dictionary, including the header name and header value. This header is ready to use, you don't need to encode any values. Example: <br><code>X-Authorization: Access_Token access_token="...</code></td>
+			</tr>
+			<tr>
+				<td><code>sccess_token</code></td>
+				<td>Only the access token that was generated.</code></td>
+			</tr>
+			<tr>
+				<td><code>refresh_token</code></td>
+				<td>The refresh token that was generated along with the access token.</code></td>
+			</tr>
+			<tr>
+				<td><code>expires_at</code></td>
+				<td>The Unix timestamp of when the token will expire.</code></td>
+			</tr>
+			<tr>
+				<td><code>creation_time</code></td>
+				<td>Returns the Unix timestamp of when the token was generated.</code></td>
+			</tr>
+			<tr>
+				<td><code>expires_in_seconds</code></td>
+				<td>Returns the lifespan in seconds of the token. This is always set to 3600.</code></td>
+			</tr>
+		</table>
+		
+		<h4>Refresh Token</h4> 
+		
+		<p>When using the Password grant type workflow, you can get a new token for the user by using the refresh token, instead of having the user sign in again after an hour. The refresh token only lasts about 5-10 minutes longer, so you'll need to use it soon after the access token expires. To generate a new access token using a refresh token, use the <code>refresh_token_request</code> method of the OAuth service. Pass this method the <code>OAuth2Request</code> object that the service provided you (see previous section): 
+		
+		<pre><code class="language-ruby">refresh_token_request(oauth_request)</code></pre>
+
+		<p>The service will return a new <code>OAuth2Request</code> object described in the results section above. 
+			
+		<h4>Example</h4>
+		
+<pre class="line-numbers"><code class="language-ruby">require 'learning_studio_authentication/config'
+require 'learning_studio_authentication/request'
+require 'learning_studio_authentication/service'
+
+APP_ID            = "" # Identifies your Application
+TOKEN_KEY_MONIKER = "" 
+CLIENT_STRING     = "" # Identifies the LearningStudio instance
+
+USERNAME          = "" # Provided by user through a sign-in box
+PASSWORD          = "" # Provided by user through a sign-in box
+
+URL               = "" # e.g., https://api.learningstudio.com/me
+
+config = LearningStudioAuthentication::Config::OAuthConfig.new({
+    :application_id   => APP_ID,
+    :consumer_key     => TOKEN_KEY_MONIKER,
+    :client_string    => CLIENT_STRING
+})
+
+factory = LearningStudioAuthentication::Service::OAuthServiceFactory.new(config)
+oauth_service = factory.build("OAuth2PasswordService")
+oauth_request = oauth_service.generate_request(USERNAME, PASSWORD)
+
+http_header = oauth_request.headers
+# Returns HTTP Header key and value as a dictionary, 
+# ready to use in your API Call, e.g.
+# X-Authorization: Access_Token access_token="... 
+
+access_token = oauth_request.access_token
+# Returns the Access Token for the user
+puts "Access Token: %s" % [access_token]
+
+
+# Using the HTTP Header
+request = HTTPClient.new
+response = request.get(URL, nil, http_header)
+puts "Status Code: %s" % [response.status]
+
+# Get a New Access Token using the Refresh Token
+new_oauth_request = oauth_service.refresh_token_request(oauth_request)
+puts "New Access Token: %s" % [new_oauth_request.access_token]</code></pre>
+		
+		
+		
+		<hr>
+		<a name="OAuth2Assertion"></a>
+		<h3>OAuth 2 (Assertion Grant Type)</h3>
+		
+		<h4>Setup</h4>
+		<p>To begin, require the authentication library's <code>config</code>, <code>request</code>, and <code>service</code> resources.</p>
+		<pre><code class="language-ruby">require 'learning_studio_authentication/config'
+require 'learning_studio_authentication/request'
+require 'learning_studio_authentication/service'</code></pre>
+		<h4>Configuration</h4>
+		<p>In OAuth 2 Assertion Grant Type, you need your Application ID, Token Key Moniker, Shared Secret, and Client String. You also need to provide the name of your application (avoid spaces).</p> 
+		<p>The <code>OAuthConfig</code> class is a generic carrier for the configuration information for all authentication methods. You'll add the information you need using these methods:</p> 
+				<pre><code class="language-ruby">config = LearningStudioAuthentication::Config::OAuthConfig.new({
+    :application_name => APP_NAME,
+    :application_id   => APP_ID,
+    :consumer_key     => TOKEN_KEY_MONIKER,
+    :consumer_secret  => SHARED_SECRET,
+	:client_string    => CLIENT_STRING
+})</code></pre>
+
+		<h4>The Factory</h4>
+		<p>The <code>OAuthServiceFactory</code> object instantiates an appropriate service for the authentication method you want to use. With this approach, you need only use the factory object and tell it which auth method you want to use, and it returns an object that will handle the access token generation. When creating the factory object, pass the config object to the constructor:</p> 
+		<pre><code class="language-ruby">factory = LearningStudioAuthentication::Service::OAuthServiceFactory.new(config)
+oauth_service = factory.build("OAuth2AssertionService")</code></pre>
+
+	    <h4>Token Request</h4> 
+
+		<p>In this example, <code>oauth_service</code> is an object of the <code>OAuth2AssertionService</code> class. This object will take the configuration information and the username, and requests an access token for the user. Use the token in an HTTP Header for all subsequent requests. The token lasts an hour, after which time you can repeat the same process to get a new access token.</p> 
+		<p>The method you will use to request the token is <code>generate_request</code> method, which has the following signature:</p> 
+		<pre><code class="language-ruby">generate_request(username)</code></pre>
+		<h4>Results</h4>
+		<p>When you call the <code>OAuth2AssertionService</code> method, it will return an object of the <code>OAuth2Request</code> class. This object has several properties:</p>
+		<table> 
+			<tr>
+				<th>Property</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td><code>headers</code></td>
+				<td>The full HTTP header to include in your API call. It is returned as a full header in a dictionary, including the header name and header value. This header is ready to use, you don't need to encode any values. Example: <br><code>X-Authorization: Access_Token access_token="...</code></td>
+			</tr>
+			<tr>
+				<td><code>access_Token</code></td>
+				<td>Only the access token that was generated.</code></td>
+			</tr>
+			<tr>
+				<td><code>expires_at</code></td>
+				<td>The Unix timestamp of when the token will expire.</code></td>
+			</tr>
+			<tr>
+				<td><code>creation_time</code></td>
+				<td>Returns the Unix timestamp of when the token was generated.</code></td>
+			</tr>
+			<tr>
+				<td><code>expires_in_seconds</code></td>
+				<td>Returns the lifespan in seconds of the token. This is always set to 3600.</code></td>
+			</tr>
+		</table>
+		
+		<h4>Refresh Token</h4> 
+		
+		<p>When using the Assertion grant type workflow, there is no refresh token. Simply request a new token using the same process above. 
+			
+		<h4>Example</h4>
+		
+<pre class="line-numbers"><code class="language-ruby">require 'learning_studio_authentication/config'
+require 'learning_studio_authentication/request'
+require 'learning_studio_authentication/service'
+
+APP_ID            = "" # Identifies your Application
+APP_NAME          = "" # No spaces for best results (e.g., MyAppName)
+TOKEN_KEY_MONIKER = ""
+SHARED_SECRET     = ""
+CLIENT_STRING     = "" # Identifies the LearningStudio instance
+
+USERNAME          = "" # Provided by user through a sign-in box
+
+URL               = "" # e.g., https://api.learningstudio.com/me
+
+config = LearningStudioAuthentication::Config::OAuthConfig.new({
+    :application_name => APP_NAME,
+    :application_id   => APP_ID,
+    :consumer_key     => TOKEN_KEY_MONIKER,
+    :consumer_secret  => SHARED_SECRET,
+	:client_string    => CLIENT_STRING
+})
+
+factory = LearningStudioAuthentication::Service::OAuthServiceFactory.new(config)
+oauth_service = factory.build("OAuth2AssertionService")
+oauth_request = oauth_service.generate_request(USERNAME)
+
+http_header = oauth_request.headers
+# Returns HTTP Header key and value as a dictionary, 
+# ready to use in your API Call, e.g.
+# X-Authorization: Access_Token access_token="... 
+
+access_token = oauth_request.access_token
+# Returns the Access Token for the user
+puts "Access Token: %s" % [access_token]
+
+
+# Using the HTTP Header
+request = HTTPClient.new
+response = request.get(URL, nil, http_header)
+puts "Status Code: %s" % [response.status]</code></pre>
+		
+	</article> 	
+	<footer>
+		&copy;2014 Pearson Education Inc. Libraries released under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache 2.0 License</a>. For help with these libraries or the APIs, please use the <a href="https://community.pdn.pearson.com" target="_blank">PDN Developer Community</a>.
+	</footer>
+        <script src="../assets/js/prism.js"></script>
+
+    </body>
+</html>
